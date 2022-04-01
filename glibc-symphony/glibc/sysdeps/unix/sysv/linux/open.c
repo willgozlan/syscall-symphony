@@ -37,10 +37,10 @@ __libc_open (const char *file, int oflag, ...)
 {
   int mode = 0;
 
-  if(system("/usr/bin/aplay /home/pi/PROJECT/sounds/open.wav") == -1)
+  if(system("/usr/bin/aplay /home/pi/syscall-symphony/sounds/open.wav") == -1)
   {
 	printf("system() failed\n");
-	return 1;
+	return -1;
   }
 
   if (__OPEN_NEEDS_MODE (oflag))

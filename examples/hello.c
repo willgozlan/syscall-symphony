@@ -1,6 +1,6 @@
 #include <fcntl.h>
 
 int main(){
-	open("test", O_CREAT);
+	open("foo", O_CREAT, 0);
 	return 0;
 }
