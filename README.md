@@ -56,3 +56,8 @@ Solution:
 Problem: No such file or directory for either `/usr/bin/aplay` or `/home/pi/syscall-symphony/sounds/open.wav`
 
 Solution: See step 2 above. 
+
+
+Problem: -bash: ./hello: No such file or directory in step 6, even though the executable is there 
+
+Solution: See the note in step 6. The `testglibc` variable is set to the wrong place (it must be an absolute path to `syscall-symphony/glibc-symphony/local`).
