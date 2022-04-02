@@ -8,6 +8,11 @@ This is the code we have so far, for the milestone report. See Milestone report 
 ## Setup, Build, and Run Instructions:
 1.) Clone this repo in your home directory. For the milestone specifically, be sure to be on the branch `milestone-code-example`. 
 
+  ```
+  cd ~
+  git clone https://github.com/willgozlan/syscall-symphony.git
+  ``` 
+
 2.) Verify dependencies:  
   - Ensure you have gawk and bison installed as these are dependencies (`sudo apt install gawk bison`)
   - Ensure you have the `aplay` utility to play wav files from command line. Check in `/usr/bin/aplay`. If you don't have it, you can install it with `sudo apt-get install alsa-utils`
