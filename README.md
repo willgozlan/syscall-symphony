@@ -40,7 +40,7 @@ You are done compiling and setting up our version of glibc!
  
  6.) Finally, to test this modifed version of `glibc`, navigate into the `syscall-symphony/examples` directory. Run `make` to build the sample program with the provided Makefile, which links against `glibc-symphony`. Finally, execute `./hello` which should create the file named foo, and play the open sound. See report for more details on this. 
 
-Note: If you have cloned the repo into another location besides `/home/pi/`, you should modify the first line of the Makefile in exmaples so that the variable `testglibc` points to `syscall-symphony/glibc-symphony/local`, using an absolute path. 
+Note: If you have cloned the repo into another location besides `/home/pi/`, you should modify the first line of the Makefile in the `syscall-symphony/examples` directory so that the variable `testglibc` points to where `syscall-symphony/glibc-symphony/local` is on your system, using an absolute path. 
 
 
 
