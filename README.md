@@ -26,7 +26,9 @@ This is the code we have so far, for the milestone report. See Milestone report 
     - `local/`: Initially empty directory where the headers/library files get installed after build
   - `sounds/`: The wav files for the specific syscalls reside here. 
 
-Navigate into the `syscall-symphony/glibc-symphony/glibc-build` directory and run the following, where `PATH` is the _absolute_ path to `syscall-symphony/glibc-symphony/local`:     `../glibc/configure --prefix=PATH` 
+Navigate into the `syscall-symphony/glibc-symphony/glibc-build` directory and run the following, where `PATH` is the _absolute_ path to `syscall-symphony/glibc-symphony/local`:   
+
+`../glibc/configure --prefix=PATH` 
  
  4.) From the same directory (`syscall-symphony/glibc-symphony/glibc-build`), compile with  `make -j4`. Note, you could also make clean, if you wanted to clean up leftover artifacts. 
 
