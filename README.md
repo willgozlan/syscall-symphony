@@ -11,7 +11,7 @@ This is the code we have so far, for the milestone report. See Milestone report 
 2.) Verify dependencies:  
   - Ensure you have gawk and bison installed as these are dependencies (`sudo apt install gawk bison`)
   - Ensure you have the `aplay` utility to play wav files from command line. Check in `/usr/bin/aplay`. If you don't have it, you can install it with `sudo apt-get install alsa-utils`
-  - Right now, assumptions are made that the repo is cloned into the home directory and that the user is the `pi` user. However, as mentioned in the report, we will fix that before the project is finalized. For now, please be the pi user, and if not, I'll have specific modification instructions here. 
+  - Right now, assumptions are made that the repo is cloned into the home directory and that the user is the `pi` user. However, as mentioned in the report, we will fix that before the project is finalized. For now, please be the pi user, and if not, there are specific modification instructions further below. 
 
 3.) The project directory `syscall-symphony/`contains 3 sub-directories as follows:
   - `examples/`: This contains an example program to test our modifications to glibc, as well as a Makefile to build and link against our version of glibc. 
