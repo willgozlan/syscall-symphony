@@ -6,11 +6,11 @@ This is the code we have so far, for the milestone report. See Milestone report 
 
 
 ## Setup, Build, and Run Instructions:
-1.) Clone this repo in your home directory. For the milestone specifically, be sure to be on the branch `milestone-code-example`. 
+1.) Clone the `milestone-code-example` branch of this repo in your home directory. For the milestone specifically, be sure to be on the branch `milestone-code-example`. 
 
   ```
   cd ~
-  git clone https://github.com/willgozlan/syscall-symphony.git
+  git clone -b milestone-code-example https://github.com/willgozlan/syscall-symphony.git
   ``` 
 
 2.) Verify dependencies:  
