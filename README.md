@@ -11,11 +11,11 @@ This is the code we have so far, for the milestone report. See Milestone report 
 2.) Verify dependencies:  
   - Ensure you have gawk and bison installed as these are dependencies (`sudo apt install gawk bison`)
   - Ensure you have the `aplay` utility to play wav files from command line. Check in `/usr/bin/aplay`. If you don't have it, you can install it with `sudo apt-get install alsa-utils`
-  - Right now, assumptions are made that the repo is cloned into the home directory and that the user is the `pi` user. However, as mentioned in the report, we will fix that before the project is finalized. For now, please be the pi user, and if not, there are specific modification instructions further below. 
+  - Right now, assumptions are made that the repo is cloned into the home directory and that the user is the `pi` user. However, as mentioned in the report, we will fix that before the project is finalized. For now, please be the pi user, and if not, there are specific modification instructions in Step 4. 
 
 3.) The project directory `syscall-symphony/`contains 3 sub-directories as follows:
   - `examples/`: This contains an example program to test our modifications to glibc, as well as a Makefile to build and link against our version of glibc. 
-  - `glibc-symphony/`: This is the main directory for our modifed glibc version to make changes to the glibc source code, and build and run it. There are 3 directories in here as well, as follows:
+  - `glibc-symphony/`: This is the main directory for our modifed glibc version to make changes to the glibc source code as well as build and run it. There are 3 directories, as follows:
     - `glibc/`:	glibc source code, where we make our modifications 
     - `glibc-build/`:	Initially empty directory where glibc will be built
     - `local/`: Initially empty directory where the headers/library files get installed after build
