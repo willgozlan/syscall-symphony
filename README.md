@@ -50,6 +50,7 @@ Problem: Audio doesn't come through
 Solution: 
   - Ensure an audio device is plugged into the RaspberryPi, and it is on. 
   - Ensure the audio out is set to the correct location by running `sudo raspi-config`, then going to System Options -> Audio -> Headphones -> OK -> Finish. Alternatively you could set this to HDMI if you are using an HDMI device with speakers. 
+  - You can verify ALSA's aplay is working by navigating to `syscall-symphony/examples/` and playing the `open.wav` file by running `aplay open.wav`. 
 
 
 Problem: No such file or directory for either `/usr/bin/aplay` or `/home/pi/syscall-symphony/sounds/open.wav`
