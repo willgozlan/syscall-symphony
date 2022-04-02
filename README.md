@@ -1,4 +1,4 @@
-# WARNING: Incorrect Branch. Please switch to branch milestone-code-example for our milestone code
+# WARNING: Incorrect Branch. Please switch to branch `milestone-code-example` for our milestone code
 
 # syscall-symphony
 
