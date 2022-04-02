@@ -45,19 +45,19 @@ Note: If you have cloned the repo into another location besides `/home/pi/`, you
 
 
 ## Troubleshooting
-Problem: Audio doesn't come through
+1.) Problem: Audio doesn't come through
 
-Solution: 
-  - Ensure an audio device is plugged into the RaspberryPi, and it is on. 
-  - Ensure the audio out is set to the correct location by running `sudo raspi-config`, then going to System Options -> Audio -> Headphones -> OK -> Finish. Alternatively you could set this to HDMI if you are using an HDMI device with speakers. 
-  - You can verify ALSA's aplay is working by navigating to `syscall-symphony/sounds/` and playing the `open.wav` file by running `aplay open.wav`. 
-
-
-Problem: No such file or directory for either `/usr/bin/aplay` or `/home/pi/syscall-symphony/sounds/open.wav`
-
-Solution: See step 2 above. 
+  Solution: 
+    - Ensure an audio device is plugged into the RaspberryPi, and it is on. 
+    - Ensure the audio out is set to the correct location by running `sudo raspi-config`, then going to System Options -> Audio -> Headphones -> OK -> Finish. Alternatively you could set this to HDMI if you are using an HDMI device with speakers. 
+    - You can verify ALSA's aplay is working by navigating to `syscall-symphony/sounds/` and playing the `open.wav` file by running `aplay open.wav`. 
 
 
-Problem: -bash: ./hello: No such file or directory in step 6, even though the executable is there 
+2.) Problem: No such file or directory for either `/usr/bin/aplay` or `/home/pi/syscall-symphony/sounds/open.wav`
 
-Solution: See the note in step 6. The `testglibc` variable is set to the wrong place (it must be an absolute path to `syscall-symphony/glibc-symphony/local`).
+  Solution: See step 2 above. 
+
+
+3.) Problem: -bash: ./hello: No such file or directory in step 6, even though the executable is there 
+
+  Solution: See the note in step 6. The `testglibc` variable is set to the wrong place (it must be an absolute path to `syscall-symphony/glibc-symphony/local`).
