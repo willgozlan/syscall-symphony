@@ -39,6 +39,7 @@ Note: If you have cloned the repo into another location besides `/home/pi/`, you
 
 ## Troubleshooting
 Problem: Audio doesn't come through
+
 Solution: 
   - Ensure an audio device is plugged into the RaspberryPi, and it is on. 
   - Ensure the audio out is set to the correct location by running `sudo raspi-config`, then going to System Options -> Audio -> Headphones -> OK -> Finish. Alternatively you could set this to HDMI if you are using an HDMI device with speakers. 
