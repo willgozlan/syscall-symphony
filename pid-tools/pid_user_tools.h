@@ -5,6 +5,6 @@
 
 #define MAX_PID_LENGTH 10
 
-int add_pid(void);
-int remove_pid(void);
-int pid_exists(void);
+int add_pid(int argc, char* argv[]);
+int remove_pid(int argc, char* argv[]);
+int pid_exists(int pid);
