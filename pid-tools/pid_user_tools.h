@@ -33,8 +33,9 @@
 #define FPUTS_ERROR -11
 #define FPUTC_ERROR -12
 #define REMOVE_ERROR -13
+#define NO_DOT_PIDS_FILE -14
 
 #define ATOI_RET_ERROR_VALUE 0
 
 int add_pid(int pid);
-int remove_pid(string pid);
+int remove_pid(char* pid);
