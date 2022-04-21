@@ -37,4 +37,4 @@
 #define ATOI_RET_ERROR_VALUE 0
 
 int add_pid(int pid);
-int remove_pid(int pid);
+int remove_pid(string pid);
