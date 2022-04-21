@@ -28,7 +28,8 @@ int remove_pid(char* pid) {
         return MALLOC_ERROR;
       }
         
-           while ((read = getline(&buf, &bufsize, pidfile)) > SUCCESS) {
+      int existence = 0; // checks if the given PID is actually in the file
+      while ((read = getline(&buf, &bufsize, pidfile)) > SUCCESS) {
         buf[strlen(buf) - 1] = '\0';
 
         if (strcmp(buf, pid) != SUCCESS) {
@@ -41,13 +42,24 @@ int remove_pid(char* pid) {
             return FPUTC_ERROR;
           }
         }
+        else {
+            existence = 1;
+        }
+          
         if(fflush(temp)) {
           perror("fflush");
           return FFLUSH_ERROR;
         }
       }
+      
+      if (existence == 0) {
+        if (printf("WARNING: %s%s", pid, " was not in .pids - no change made\n") < SUCCESS) {
+          perror("printf");
+          return PRINTF_ERROR;
+        }
+      }
         
-              lseek(fileno(temp), 0, SEEK_SET);
+      lseek(fileno(temp), 0, SEEK_SET);
       pidfile = freopen(".pids", "w", pidfile);
       while ((read = getline(&buf, &bufsize, temp)) > SUCCESS) {
         if (fputs(buf, pidfile) == EOF) {
