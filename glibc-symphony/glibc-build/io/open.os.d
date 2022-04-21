@@ -82,24 +82,31 @@ $(common-objpfx)io/open.os: \
  ../include/bits/types/wint_t.h ../wcsmbs/bits/types/wint_t.h \
  ../include/gconv.h ../iconv/gconv.h ../include/shlib-compat.h \
  $(common-objpfx)abi-versions.h \
+ ../include/unistd.h ../posix/unistd.h \
+ ../sysdeps/unix/sysv/linux/bits/posix_opt.h ../bits/environments.h \
+ ../bits/confname.h ../include/bits/getopt_posix.h \
+ ../posix/bits/getopt_posix.h ../include/bits/getopt_core.h \
+ ../posix/bits/getopt_core.h ../include/bits/unistd_ext.h \
+ ../sysdeps/unix/sysv/linux/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h \
+ ../sysdeps/unix/sysv/linux/arm/kernel-features.h \
+ ../sysdeps/unix/sysv/linux/kernel-features.h \
+ ../sysdeps/unix/sysv/linux/include/sys/syscall.h \
+ ../sysdeps/unix/sysv/linux/arm/arch-syscall.h \
  ../sysdeps/unix/sysv/linux/sysdep-cancel.h \
  ../sysdeps/unix/sysv/linux/arm/sysdep.h \
- ../sysdeps/unix/sysv/linux/sysdep.h \
- ../sysdeps/unix/sysv/linux/arm/kernel-features.h \
- ../sysdeps/unix/sysv/linux/kernel-features.h ../include/errno.h \
- ../stdlib/errno.h ../sysdeps/unix/sysv/linux/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/arm-linux-gnueabihf/asm/errno.h \
+ ../sysdeps/unix/sysv/linux/sysdep.h ../include/errno.h ../stdlib/errno.h \
+ ../sysdeps/unix/sysv/linux/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/arm-linux-gnueabihf/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  ../bits/types/error_t.h ../sysdeps/unix/arm/sysdep.h \
  ../sysdeps/unix/sysdep.h ../sysdeps/generic/sysdep.h \
  ../sysdeps/generic/dwarf2.h ../sysdeps/unix/sysv/linux/single-thread.h \
- ../sysdeps/unix/sysv/linux/include/sys/syscall.h \
- ../sysdeps/unix/sysv/linux/arm/arch-syscall.h ../sysdeps/arm/sysdep.h \
- ../sysdeps/unix/sysv/linux/dl-sysdep.h ../sysdeps/arm/dl-sysdep.h \
- ../sysdeps/generic/dl-sysdep.h ../sysdeps/unix/sysv/linux/arm/tls.h \
- ../sysdeps/arm/nptl/tls.h ../sysdeps/generic/dl-dtv.h ../nptl/descr.h \
- ../include/sched.h ../posix/sched.h \
- ../sysdeps/unix/sysv/linux/bits/sched.h \
+ ../sysdeps/arm/sysdep.h ../sysdeps/unix/sysv/linux/dl-sysdep.h \
+ ../sysdeps/arm/dl-sysdep.h ../sysdeps/generic/dl-sysdep.h \
+ ../sysdeps/unix/sysv/linux/arm/tls.h ../sysdeps/arm/nptl/tls.h \
+ ../sysdeps/generic/dl-dtv.h ../nptl/descr.h ../include/sched.h \
+ ../posix/sched.h ../sysdeps/unix/sysv/linux/bits/sched.h \
  ../bits/types/struct_sched_param.h ../include/bits/cpu-set.h \
  ../posix/bits/cpu-set.h ../include/setjmp.h ../setjmp/setjmp.h \
  ../sysdeps/arm/include/bits/setjmp.h ../sysdeps/arm/bits/setjmp.h \
@@ -327,11 +334,25 @@ $(common-objpfx)bits/stdio_lim.h:
 ../iconv/gconv.h:
 ../include/shlib-compat.h:
 $(common-objpfx)abi-versions.h:
+../include/unistd.h:
+../posix/unistd.h:
+../sysdeps/unix/sysv/linux/bits/posix_opt.h:
+../bits/environments.h:
+../bits/confname.h:
+../include/bits/getopt_posix.h:
+../posix/bits/getopt_posix.h:
+../include/bits/getopt_core.h:
+../posix/bits/getopt_core.h:
+../include/bits/unistd_ext.h:
+../sysdeps/unix/sysv/linux/bits/unistd_ext.h:
+/usr/include/linux/close_range.h:
+../sysdeps/unix/sysv/linux/arm/kernel-features.h:
+../sysdeps/unix/sysv/linux/kernel-features.h:
+../sysdeps/unix/sysv/linux/include/sys/syscall.h:
+../sysdeps/unix/sysv/linux/arm/arch-syscall.h:
 ../sysdeps/unix/sysv/linux/sysdep-cancel.h:
 ../sysdeps/unix/sysv/linux/arm/sysdep.h:
 ../sysdeps/unix/sysv/linux/sysdep.h:
-../sysdeps/unix/sysv/linux/arm/kernel-features.h:
-../sysdeps/unix/sysv/linux/kernel-features.h:
 ../include/errno.h:
 ../stdlib/errno.h:
 ../sysdeps/unix/sysv/linux/bits/errno.h:
@@ -345,8 +366,6 @@ $(common-objpfx)abi-versions.h:
 ../sysdeps/generic/sysdep.h:
 ../sysdeps/generic/dwarf2.h:
 ../sysdeps/unix/sysv/linux/single-thread.h:
-../sysdeps/unix/sysv/linux/include/sys/syscall.h:
-../sysdeps/unix/sysv/linux/arm/arch-syscall.h:
 ../sysdeps/arm/sysdep.h:
 ../sysdeps/unix/sysv/linux/dl-sysdep.h:
 ../sysdeps/arm/dl-sysdep.h:

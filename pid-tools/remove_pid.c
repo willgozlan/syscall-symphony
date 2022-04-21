@@ -66,7 +66,7 @@ int remove_pid(char* pid) {
 
       if (remove("temp") != SUCCESS) {
         perror("remove");
-        return REMOVE_FILE_ERROR;
+        return REMOVE_PID_ERROR;
       }
 
     }
