@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
+#include "pid_user_tools.h"
 
 int remove_pid(char* pid) {
     if (access(".pids", F_OK) == SUCCESS) {
