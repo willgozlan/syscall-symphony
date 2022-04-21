@@ -28,6 +28,10 @@
 #define ADD_PID_ERROR -7
 #define FPRINTF_ERROR -8
 #define REMOVE_PID_ERROR -9
+#define MALLOC_ERROR -10
+#define FPUTS_ERROR -11
+#define FPUTC_ERROR -12
+#define REMOVE_ERROR -13
 
 #define ATOI_RET_ERROR_VALUE 0
 
