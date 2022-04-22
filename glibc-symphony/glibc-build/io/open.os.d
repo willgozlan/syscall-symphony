@@ -91,8 +91,6 @@ $(common-objpfx)io/open.os: \
  /usr/include/linux/close_range.h \
  ../sysdeps/unix/sysv/linux/arm/kernel-features.h \
  ../sysdeps/unix/sysv/linux/kernel-features.h \
- ../sysdeps/unix/sysv/linux/include/sys/syscall.h \
- ../sysdeps/unix/sysv/linux/arm/arch-syscall.h \
  ../sysdeps/unix/sysv/linux/sysdep-cancel.h \
  ../sysdeps/unix/sysv/linux/arm/sysdep.h \
  ../sysdeps/unix/sysv/linux/sysdep.h ../include/errno.h ../stdlib/errno.h \
@@ -102,11 +100,13 @@ $(common-objpfx)io/open.os: \
  ../bits/types/error_t.h ../sysdeps/unix/arm/sysdep.h \
  ../sysdeps/unix/sysdep.h ../sysdeps/generic/sysdep.h \
  ../sysdeps/generic/dwarf2.h ../sysdeps/unix/sysv/linux/single-thread.h \
- ../sysdeps/arm/sysdep.h ../sysdeps/unix/sysv/linux/dl-sysdep.h \
- ../sysdeps/arm/dl-sysdep.h ../sysdeps/generic/dl-sysdep.h \
- ../sysdeps/unix/sysv/linux/arm/tls.h ../sysdeps/arm/nptl/tls.h \
- ../sysdeps/generic/dl-dtv.h ../nptl/descr.h ../include/sched.h \
- ../posix/sched.h ../sysdeps/unix/sysv/linux/bits/sched.h \
+ ../sysdeps/unix/sysv/linux/include/sys/syscall.h \
+ ../sysdeps/unix/sysv/linux/arm/arch-syscall.h ../sysdeps/arm/sysdep.h \
+ ../sysdeps/unix/sysv/linux/dl-sysdep.h ../sysdeps/arm/dl-sysdep.h \
+ ../sysdeps/generic/dl-sysdep.h ../sysdeps/unix/sysv/linux/arm/tls.h \
+ ../sysdeps/arm/nptl/tls.h ../sysdeps/generic/dl-dtv.h ../nptl/descr.h \
+ ../include/sched.h ../posix/sched.h \
+ ../sysdeps/unix/sysv/linux/bits/sched.h \
  ../bits/types/struct_sched_param.h ../include/bits/cpu-set.h \
  ../posix/bits/cpu-set.h ../include/setjmp.h ../setjmp/setjmp.h \
  ../sysdeps/arm/include/bits/setjmp.h ../sysdeps/arm/bits/setjmp.h \
@@ -348,8 +348,6 @@ $(common-objpfx)abi-versions.h:
 /usr/include/linux/close_range.h:
 ../sysdeps/unix/sysv/linux/arm/kernel-features.h:
 ../sysdeps/unix/sysv/linux/kernel-features.h:
-../sysdeps/unix/sysv/linux/include/sys/syscall.h:
-../sysdeps/unix/sysv/linux/arm/arch-syscall.h:
 ../sysdeps/unix/sysv/linux/sysdep-cancel.h:
 ../sysdeps/unix/sysv/linux/arm/sysdep.h:
 ../sysdeps/unix/sysv/linux/sysdep.h:
@@ -366,6 +364,8 @@ $(common-objpfx)abi-versions.h:
 ../sysdeps/generic/sysdep.h:
 ../sysdeps/generic/dwarf2.h:
 ../sysdeps/unix/sysv/linux/single-thread.h:
+../sysdeps/unix/sysv/linux/include/sys/syscall.h:
+../sysdeps/unix/sysv/linux/arm/arch-syscall.h:
 ../sysdeps/arm/sysdep.h:
 ../sysdeps/unix/sysv/linux/dl-sysdep.h:
 ../sysdeps/arm/dl-sysdep.h:

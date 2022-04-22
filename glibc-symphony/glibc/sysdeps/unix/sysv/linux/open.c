@@ -24,7 +24,9 @@
 // We added:
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <unistd.h>
+//#include "../../../../misc/pid_exists.h"
+/*
 // For PID stuff: 
 #include <unistd.h>
 #include <sys/syscall.h>
@@ -46,9 +48,9 @@ int pid_exists(int pid);
 
 
 
-/* Main function to check if a pid exists in our PID list.
+* Main function to check if a pid exists in our PID list.
  * Returning result of that, or unique error code
- */ 
+ * 
 int pid_exists(int pid)
 {
     char line[BUF_SIZE] = {0};
@@ -76,10 +78,10 @@ int pid_exists(int pid)
 
 
 
-/* Very similar to C built in function getline(), but uses syscall() directly instead of wrapper 
+* Very similar to C built in function getline(), but uses syscall() directly instead of wrapper 
  * to avoid recursion within modifed syscall wrapper. 
  * Adopted from: https://stackoverflow.com/questions/33106505/read-file-line-by-line-in-c-mostly-with-syscalls  
- */
+ *
 int readline (char *buf, int sz, const char *fn, off_t *offset)
 {
     // Open the file
@@ -143,10 +145,10 @@ int readline (char *buf, int sz, const char *fn, off_t *offset)
 
 
 
-/* Internal function to convert from string to integer. 
+* Internal function to convert from string to integer. 
  * Same usage as C's built in atoi() function, without worry of built in system calls
  * Adopted from: https://www.geeksforgeeks.org/write-your-own-atoi/
- */
+ *
 int my_atoi(char* str)
 {
     int res = 0;
@@ -156,7 +158,7 @@ int my_atoi(char* str)
     }
     return res;
 }
-
+*/
 // end PID stuff
 
 #include <sysdep-cancel.h>
@@ -170,14 +172,14 @@ __libc_open (const char *file, int oflag, ...)
 {
   int mode = 0;
 
-  if(pid_exists(getpid()) == PID_FOUND)
-  {
+ // if(pid_exists(getpid()) == PID_FOUND)
+  //{
 	if(system("/usr/bin/aplay /home/pi/syscall-symphony/sounds/open.wav") == -1)
   	{
 		printf("system() failed\n");
 		return -1;
  	}
-  }
+ // }
 
   if (__OPEN_NEEDS_MODE (oflag))
     {
