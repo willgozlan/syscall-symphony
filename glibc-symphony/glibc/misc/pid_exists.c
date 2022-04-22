@@ -1,4 +1,8 @@
 #include "pid_exists.h"
+#include "my_atoi.h"
+#include "readline.h"
+#define BUF_SIZE 10
+#define END_OF_FILE -3
 
 /* Main function to check if a pid exists in our PID list.
  * Returning result of that, or unique error code

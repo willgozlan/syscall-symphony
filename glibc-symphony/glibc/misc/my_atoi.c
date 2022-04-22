@@ -4,8 +4,8 @@
  * Adopted from: https://www.geeksforgeeks.org/write-your-own-atoi/
  */
 
-#include "pid_exists.h"
-
+#include "my_atoi.h"
+#define INTEGER_BASE 10
 int my_atoi(char* str)
 {
     int res = 0;

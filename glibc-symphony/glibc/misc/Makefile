@@ -38,7 +38,7 @@ headers	:= sys/uio.h bits/uio-ext.h bits/uio_lim.h \
 	   bits/select2.h bits/hwcap.h sys/auxv.h \
 	   sys/sysmacros.h bits/sysmacros.h bits/types/struct_iovec.h \
 	   bits/err-ldbl.h bits/error-ldbl.h \
-	   sys/single_threaded.h pid_exists.h
+	   sys/single_threaded.h readline.h my_atoi.h pid_exists.h
 
 routines := brk sbrk sstk ioctl \
 	    readv writev preadv preadv64 pwritev pwritev64 \

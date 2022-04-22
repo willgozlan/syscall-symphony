@@ -3,7 +3,22 @@
  * Adopted from: https://stackoverflow.com/questions/33106505/read-file-line-by-line-in-c-mostly-with-syscalls  
  */
 
-#include "pid_exists.h"
+#include "readline.h"
+
+//#include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/syscall.h>
+
+
+#define BUF_SIZE 10
+
+
+#define SYSCALL_FAIL -1
+#define FILE_NO_EXIST -1
+#define BAD_READ -2
+#define END_OF_FILE -3
+#define BAD_CLOSE -4
 
 
 int readline (char *buf, int sz, const char *fn, off_t *offset)

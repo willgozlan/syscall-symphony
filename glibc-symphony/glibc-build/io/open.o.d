@@ -91,6 +91,7 @@ $(common-objpfx)io/open.o: \
  /usr/include/linux/close_range.h \
  ../sysdeps/unix/sysv/linux/arm/kernel-features.h \
  ../sysdeps/unix/sysv/linux/kernel-features.h \
+ ../sysdeps/unix/sysv/linux/../../../../misc/pid_exists.h \
  ../sysdeps/unix/sysv/linux/sysdep-cancel.h \
  ../sysdeps/unix/sysv/linux/arm/sysdep.h \
  ../sysdeps/unix/sysv/linux/sysdep.h ../include/errno.h ../stdlib/errno.h \
@@ -348,6 +349,7 @@ $(common-objpfx)abi-versions.h:
 /usr/include/linux/close_range.h:
 ../sysdeps/unix/sysv/linux/arm/kernel-features.h:
 ../sysdeps/unix/sysv/linux/kernel-features.h:
+../sysdeps/unix/sysv/linux/../../../../misc/pid_exists.h:
 ../sysdeps/unix/sysv/linux/sysdep-cancel.h:
 ../sysdeps/unix/sysv/linux/arm/sysdep.h:
 ../sysdeps/unix/sysv/linux/sysdep.h:
