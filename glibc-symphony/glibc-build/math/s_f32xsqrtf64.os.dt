@@ -1,0 +1,12 @@
+/home/pi/syscall-symphony/glibc-symphony/glibc-build/math/s_f32xsqrtf64.os: \
+ ../sysdeps/ieee754/dbl-64/s_f32xsqrtf64.c ../include/stdc-predef.h \
+ /home/pi/syscall-symphony/glibc-symphony/glibc-build/libc-modules.h \
+ ../include/libc-symbols.h \
+ /home/pi/syscall-symphony/glibc-symphony/glibc-build/config.h \
+ ../sysdeps/generic/libc-symver.h ../sysdeps/generic/symbol-hacks.h
+../include/stdc-predef.h:
+/home/pi/syscall-symphony/glibc-symphony/glibc-build/libc-modules.h:
+../include/libc-symbols.h:
+/home/pi/syscall-symphony/glibc-symphony/glibc-build/config.h:
+../sysdeps/generic/libc-symver.h:
+../sysdeps/generic/symbol-hacks.h:
