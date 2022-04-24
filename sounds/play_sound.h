@@ -1,10 +1,3 @@
-#include<sys/wait.h>
-#include<errno.h>
-#include<unistd.h>
-#include<stdio.h>
-#include<stdlib.h>
-#include <linux/unistd.h>
-
 #define READ 1
 #define WRITE 2
 #define OPEN 3
