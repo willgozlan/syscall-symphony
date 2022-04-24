@@ -1,4 +1,10 @@
 #include "play_sound.h"
+#include<sys/wait.h>
+#include<errno.h>
+#include<unistd.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include <linux/unistd.h>
 
 // ERROR CODES
 #define SUCCESS 0
@@ -27,7 +33,6 @@ int play_sound(int sound) {
     pid_t pid;
     siginfo_t siginfo;
     char * sound_file;
-    char * argv[6];
 
     switch (sound) {
         case READ:
@@ -44,12 +49,16 @@ int play_sound(int sound) {
             break;
         case MALLOC:
             sound_file = MALLOC_FILE;
+            break;
         case FREE:
             sound_file = FREE_FILE;
+            break;
         case FORK:
             sound_file = FORK_FILE;
+            break;
         case SLEEP:
             sound_file = SLEEP_FILE;
+            break;
         default:
             if (printf("Input is not a valid sound MACRO.\n") < SUCCESS) {
                 perror("printf");
@@ -59,7 +68,7 @@ int play_sound(int sound) {
                 perror("fflush");
                 return FFLUSH_ERROR;
             }
-        return USAGE_ERROR;
+            return USAGE_ERROR;
     }
     if ((pid = syscall(__NR_fork)) < SUCCESS) {
         perror("syscall");
@@ -67,13 +76,8 @@ int play_sound(int sound) {
     }
     else if (pid == CHILD) {
         /* child */
-        argv[0] = "/bin/sh";
-        argv[1] = "sh";
-        argv[2] = "-c";
-        argv[3] = "/usr/bin/aplay";
-        argv[4] = sound_file;
-        argv[5] = NULL;
-        if (syscall(__NR_execve, "/bin/sh", argv, NULL) < SUCCESS) {
+        char * argv[] = {"/usr/bin/aplay", sound_file, NULL};
+        if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
             perror("syscall");
             return EXEC_ERROR;
         }
