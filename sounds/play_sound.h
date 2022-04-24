@@ -1,3 +1,4 @@
+#pragma once
 #define READ 1
 #define WRITE 2
 #define OPEN 3
