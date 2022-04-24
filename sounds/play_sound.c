@@ -92,8 +92,3 @@ int play_sound(int sound) {
         return SUCCESS;
     }
 }
-
-int main() {
-    play_sound(OPEN);
-    return SUCCESS;
-}
