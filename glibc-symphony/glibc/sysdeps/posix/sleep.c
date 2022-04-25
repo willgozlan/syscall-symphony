@@ -21,6 +21,9 @@
 #include <errno.h>
 #include <sys/param.h>
 
+// We added:
+#include "../../misc/play_sound_from_wrapper.h"
+
 
 /* Make the process sleep for SECONDS seconds, or until a signal arrives
    and is not ignored.  The function returns the number of seconds less
@@ -37,6 +40,9 @@ __sleep (unsigned int seconds)
   const unsigned int max
     = (unsigned int) (((unsigned long int) (~((time_t) 0))) >> 1);
   struct timespec ts = { 0, 0 };
+   
+  play_sound_from_wrapper(getpid(), SLEEP);
+   
   do
     {
       if (sizeof (ts.tv_sec) <= sizeof (seconds))
