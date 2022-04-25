@@ -25,7 +25,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
-#include "../../../../misc/pid_exists.h"
+#include "../../../../misc/play_sound_from_wrapper.h"
 
 #include <sysdep-cancel.h>
 
@@ -38,13 +38,19 @@ __libc_open (const char *file, int oflag, ...)
 {
 	int mode = 0;
 
-	if(pid_exists(getpid()) == PID_FOUND)
+	
+	play_sound_from_wrapper(getpid(), OPEN);
+
+
+
+
+/*	if(pid_exists(getpid()) == PID_FOUND)
 	{
 		if(system("/usr/bin/aplay /home/pi/syscall-symphony/sounds/open.wav") == -1)
 		{
 			printf("Unable to execute sound; system() failed...continuing to open()\n");
 		}
-	}
+	}*/
 
 	if (__OPEN_NEEDS_MODE (oflag))
 	{

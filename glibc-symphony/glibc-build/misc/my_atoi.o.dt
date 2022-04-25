@@ -1,0 +1,14 @@
+/home/pi/syscall-symphony/glibc-symphony/glibc-build/misc/my_atoi.o: \
+ my_atoi.c ../include/stdc-predef.h \
+ /home/pi/syscall-symphony/glibc-symphony/glibc-build/libc-modules.h \
+ ../include/libc-symbols.h \
+ /home/pi/syscall-symphony/glibc-symphony/glibc-build/config.h \
+ ../sysdeps/generic/libc-symver.h ../sysdeps/generic/symbol-hacks.h \
+ my_atoi.h
+../include/stdc-predef.h:
+/home/pi/syscall-symphony/glibc-symphony/glibc-build/libc-modules.h:
+../include/libc-symbols.h:
+/home/pi/syscall-symphony/glibc-symphony/glibc-build/config.h:
+../sysdeps/generic/libc-symver.h:
+../sysdeps/generic/symbol-hacks.h:
+my_atoi.h:

@@ -1,0 +1,12 @@
+/home/pi/syscall-symphony/glibc-symphony/glibc-build/nptl/elision-lock.o: \
+ elision-lock.c ../include/stdc-predef.h \
+ /home/pi/syscall-symphony/glibc-symphony/glibc-build/libc-modules.h \
+ ../include/libc-symbols.h \
+ /home/pi/syscall-symphony/glibc-symphony/glibc-build/config.h \
+ ../sysdeps/generic/libc-symver.h ../sysdeps/generic/symbol-hacks.h
+../include/stdc-predef.h:
+/home/pi/syscall-symphony/glibc-symphony/glibc-build/libc-modules.h:
+../include/libc-symbols.h:
+/home/pi/syscall-symphony/glibc-symphony/glibc-build/config.h:
+../sysdeps/generic/libc-symver.h:
+../sysdeps/generic/symbol-hacks.h:

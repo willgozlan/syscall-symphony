@@ -25,7 +25,7 @@ int add_pid(int pid) {
         return SUCCESS;
     }
     else {
-        FILE * pids = fopen(".pids", "a");
+        FILE * pids = fopen("/home/pi/syscall-symphony/pid-tools/.pids", "a");
         if (pids == NULL) {
             perror("fopen");
             return FOPEN_ERROR;

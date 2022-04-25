@@ -10,6 +10,7 @@
 #include <unistd.h>
 #include <sys/syscall.h>
 #include <errno.h>
+#include <stdio.h>
 
 #define BUF_SIZE 10
 

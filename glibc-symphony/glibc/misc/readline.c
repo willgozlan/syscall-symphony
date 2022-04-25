@@ -9,7 +9,8 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/syscall.h>
-
+#include <errno.h>
+#include <stdio.h>
 
 #define BUF_SIZE 10
 
@@ -27,6 +28,7 @@ int readline (char *buf, int sz, const char *fn, off_t *offset)
     int fd = syscall(__NR_open, fn, O_RDONLY);
     if(fd == SYSCALL_FAIL) 
     {
+	perror("open");
         return FILE_NO_EXIST;
     }
 
@@ -42,13 +44,15 @@ int readline (char *buf, int sz, const char *fn, off_t *offset)
 
     // Read/Lseek error
     if(nchr == SYSCALL_FAIL) 
-    {   
+    {  
+	perror("perror"); 
         return BAD_READ;
     }
 
     // Close file, checking for error
     if(syscall(__NR_close, fd) == SYSCALL_FAIL) 
     {
+	perror("close");
         return BAD_CLOSE;
     }
 
