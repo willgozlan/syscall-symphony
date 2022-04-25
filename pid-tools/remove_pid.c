@@ -97,7 +97,7 @@ int remove_pid(char* pid) {
       }
         
       lseek(fileno(temp), 0, SEEK_SET);
-      pidfile = freopen(".pids", "w", pidfile);
+      pidfile = freopen("/syscall-symphony/pid-tools/.pids", "w", pidfile);
       while ((read = getline(&buf, &bufsize, temp)) > SUCCESS) {
         if (fputs(buf, pidfile) == EOF) {
           // release lock
