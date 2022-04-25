@@ -18,7 +18,4 @@ void play_sound_from_wrapper(int pid, int syscall)
 		printf("Unable to check PID list file due to error. See perror output above.\n");
 	}	
 }
-int main(){
-	play_sound_from_wrapper(10, OPEN);
-	return 0;
-}
+
