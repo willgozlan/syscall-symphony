@@ -45,7 +45,7 @@ int readline (char *buf, int sz, const char *fn, off_t *offset)
     // Read/Lseek error
     if(nchr == SYSCALL_FAIL) 
     {  
-	perror("perror"); 
+	perror("lseek/read"); 
         return BAD_READ;
     }
 
