@@ -6,7 +6,7 @@ int remove_pid(char* pid) {
     }
     else {
       FILE * pidfile;
-      pidfile = fopen(".pids", "a+");
+      pidfile = fopen("/syscall-symphony/pid-tools/.pids", "a+");
       if (!pidfile) {
         perror("fopen");
         return FOPEN_ERROR;
