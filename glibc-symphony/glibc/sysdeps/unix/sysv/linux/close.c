@@ -20,10 +20,16 @@
 #include <sysdep-cancel.h>
 #include <not-cancel.h>
 
+// We added:
+#include "../../../../misc/play_sound_from_wrapper.h"
+
 /* Close the file descriptor FD.  */
 int
 __close (int fd)
 {
+   
+   play_sound_from_wrapper(getpid(), CLOSE);
+   
   return SYSCALL_CANCEL (close, fd);
 }
 libc_hidden_def (__close)
