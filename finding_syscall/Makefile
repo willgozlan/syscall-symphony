@@ -1,6 +1,6 @@
 CC = gcc
 
-CFLAGS  = -Wall 
+CFLAGS  = -Wall -g 
 
 
 TARGET = open close read write malloc free fork sleep
