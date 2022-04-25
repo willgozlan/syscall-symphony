@@ -209,7 +209,7 @@
 #endif /*void*/
 
 // We added:
-#include "/../misc/play_sound_from_wrapper.h"
+#include "../misc/play_sound_from_wrapper.h"
 
 #include <stddef.h>   /* for size_t */
 #include <stdlib.h>   /* for getenv(), abort() */
