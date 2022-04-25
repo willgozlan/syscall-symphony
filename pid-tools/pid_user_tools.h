@@ -9,7 +9,6 @@
 #include <sys/syscall.h>
 #include <string.h>
 #include <sys/file.h>
-#include <fcntl.h>
 
 #define MAX_PID_LENGTH 10
 
