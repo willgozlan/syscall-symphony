@@ -32,7 +32,6 @@ int play_sound(int sound) {
 
     pid_t pid;
     siginfo_t siginfo;
-    char * sound_file;
 
     if ((pid = syscall(__NR_fork)) < SUCCESS) {
         perror("syscall");
@@ -41,54 +40,70 @@ int play_sound(int sound) {
     else if (pid == CHILD) {
         /* child */
         switch (sound) {
-            case READ:
-                if (syscall(__NR_execve, "/usr/bin/aplay", {"/usr/bin/aplay", READ_FILE, NULL}, NULL) < SUCCESS) {
+            case READ: {
+                const char * argv[] = {"/usr/bin/aplay", READ_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
                     perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
-            case WRITE:
-                if (syscall(__NR_execve, "/usr/bin/aplay", {"/usr/bin/aplay", WRITE_FILE, NULL}, NULL) < SUCCESS) {
+            }
+            case WRITE: {
+                const char * argv[] = {"/usr/bin/aplay", WRITE_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
                     perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
-            case OPEN:
-                if (syscall(__NR_execve, "/usr/bin/aplay", {"/usr/bin/aplay", OPEN_FILE, NULL}, NULL) < SUCCESS) {
+            }
+            case OPEN: {
+                const char * argv[] = {"/usr/bin/aplay", OPEN_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
                     perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
-            case CLOSE:
-                if (syscall(__NR_execve, "/usr/bin/aplay", {"/usr/bin/aplay", CLOSE_FILE, NULL}, NULL) < SUCCESS) {
+            }
+            case CLOSE: {
+                const char * argv[] = {"/usr/bin/aplay", CLOSE_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
                     perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
-            case MALLOC:
-                if (syscall(__NR_execve, "/usr/bin/aplay", {"/usr/bin/aplay", MALLOC_FILE, NULL}, NULL) < SUCCESS) {
+            }
+            case MALLOC: {
+                const char * argv[] = {"/usr/bin/aplay", MALLOC_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
                     perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
-            case FREE:
-                if (syscall(__NR_execve, "/usr/bin/aplay", {"/usr/bin/aplay", FREE_FILE, NULL}, NULL) < SUCCESS) {
+            }
+            case FREE: {
+                const char * argv[] = {"/usr/bin/aplay", FREE_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
                     perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
-            case FORK:
-                if (syscall(__NR_execve, "/usr/bin/aplay", {"/usr/bin/aplay", FORK_FILE, NULL}, NULL) < SUCCESS) {
+            }
+            case FORK: {
+                const char * argv[] = {"/usr/bin/aplay", FORK_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
                     perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
-            case SLEEP:
-                if (syscall(__NR_execve, "/usr/bin/aplay", {"/usr/bin/aplay", SLEEP_FILE, NULL}, NULL) < SUCCESS) {
+            }
+            case SLEEP: {
+                const char * argv[] = {"/usr/bin/aplay", SLEEP_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
                     perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
+            }
             default:
                 if (printf("Input is not a valid sound MACRO.\n") < SUCCESS) {
                     perror("printf");
