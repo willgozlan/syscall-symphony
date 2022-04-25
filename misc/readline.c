@@ -34,7 +34,7 @@ int readline (char *buf, int sz, const char *fn, off_t *offset)
     }
 
     // acquire lock
-    if (flock(fd, LOCK_EX) == -1) {
+    if (flock(fd, LOCK_EX) < SUCCESS) {
       perror("flock (acquire)");
       return FLOCK_ERROR;
     }
@@ -53,7 +53,7 @@ int readline (char *buf, int sz, const char *fn, off_t *offset)
     if(nchr == SYSCALL_FAIL) 
     {
         // release lock
-        if (flock(fd, LOCK_UN) == -1) {
+        if (flock(fd, LOCK_UN) < SUCCESS) {
           perror("flock (release)");
           return FLOCK_ERROR;
         }  
@@ -62,7 +62,7 @@ int readline (char *buf, int sz, const char *fn, off_t *offset)
     }
 
     // release lock
-    if (flock(fd, LOCK_UN) == -1) {
+    if (flock(fd, LOCK_UN) < SUCCESS) {
       perror("flock (release)");
       return FLOCK_ERROR;
     }
