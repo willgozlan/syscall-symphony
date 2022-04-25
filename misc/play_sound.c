@@ -34,7 +34,7 @@ int play_sound(int sound) {
     siginfo_t siginfo;
 
     if ((pid = syscall(__NR_fork)) < SUCCESS) {
-        perror("syscall");
+        perror("fork");
         return FORK_ERROR;
     }
     else if (pid == CHILD) {
@@ -43,7 +43,7 @@ int play_sound(int sound) {
             case READ: {
                 const char * argv[] = {"/usr/bin/aplay", READ_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("syscall");
+                    perror("execve");
                     return EXEC_ERROR;
                 }
                 break;
@@ -51,7 +51,7 @@ int play_sound(int sound) {
             case WRITE: {
                 const char * argv[] = {"/usr/bin/aplay", WRITE_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("syscall");
+                    perror("execve");
                     return EXEC_ERROR;
                 }
                 break;
@@ -59,7 +59,7 @@ int play_sound(int sound) {
             case OPEN: {
                 const char * argv[] = {"/usr/bin/aplay", OPEN_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("syscall");
+                    perror("execve");
                     return EXEC_ERROR;
                 }
                 break;
@@ -67,7 +67,7 @@ int play_sound(int sound) {
             case CLOSE: {
                 const char * argv[] = {"/usr/bin/aplay", CLOSE_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("syscall");
+                    perror("execve");
                     return EXEC_ERROR;
                 }
                 break;
@@ -75,7 +75,7 @@ int play_sound(int sound) {
             case MALLOC: {
                 const char * argv[] = {"/usr/bin/aplay", MALLOC_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("syscall");
+                    perror("execve");
                     return EXEC_ERROR;
                 }
                 break;
@@ -83,7 +83,7 @@ int play_sound(int sound) {
             case FREE: {
                 const char * argv[] = {"/usr/bin/aplay", FREE_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("syscall");
+                    perror("execve");
                     return EXEC_ERROR;
                 }
                 break;
@@ -91,7 +91,7 @@ int play_sound(int sound) {
             case FORK: {
                 const char * argv[] = {"/usr/bin/aplay", FORK_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("syscall");
+                    perror("execve");
                     return EXEC_ERROR;
                 }
                 break;
@@ -99,7 +99,7 @@ int play_sound(int sound) {
             case SLEEP: {
                 const char * argv[] = {"/usr/bin/aplay", SLEEP_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("syscall");
+                    perror("execve");
                     return EXEC_ERROR;
                 }
                 break;
@@ -120,7 +120,7 @@ int play_sound(int sound) {
     else {
         /* parent */
         if (syscall(__NR_waitid, P_PID, pid, &siginfo, WEXITED) < SUCCESS) {
-            perror("syscall");
+            perror("waitid");
             return WAITID_ERROR;
         }
         return SUCCESS;
