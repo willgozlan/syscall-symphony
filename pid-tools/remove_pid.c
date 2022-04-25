@@ -1,7 +1,7 @@
 #include "pid_user_tools.h"
 
 int remove_pid(char* pid) {
-    if (access(".pids", F_OK) != SUCCESS) {
+    if (access("/syscall-symphony/pid-tools/.pids", F_OK) != SUCCESS) {
          return NO_DOT_PIDS_FILE;
     }
     else {
