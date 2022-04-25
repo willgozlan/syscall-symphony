@@ -26,7 +26,7 @@ int remove_pid(char* pid) {
       }
 
       // acquire lock
-      if (flock(fd, LOCK_EX) < 0) {
+      if (flock(fd, LOCK_EX) < SUCCESS) {
         perror("flock (acquire)");
         return FLOCK_ERROR;
       }
@@ -52,7 +52,7 @@ int remove_pid(char* pid) {
         if (strcmp(buf, pid) != SUCCESS) {
           if (fputs(buf, temp) == EOF) {
             // release lock
-            if (flock(fd, LOCK_UN) == -1) {
+            if (flock(fd, LOCK_UN) < SUCCESS) {
               perror("flock_release");
               return FLOCK_ERROR;
             }
@@ -61,7 +61,7 @@ int remove_pid(char* pid) {
           }
           if (fputc('\n', temp) == EOF) {
             // release lock
-            if (flock(fd, LOCK_UN) == -1) {
+            if (flock(fd, LOCK_UN) < SUCCESS) {
               perror("flock_release");
               return FLOCK_ERROR;
             }
@@ -75,7 +75,7 @@ int remove_pid(char* pid) {
           
         if(fflush(temp)) {
           // release lock
-          if (flock(fd, LOCK_UN) == -1) {
+          if (flock(fd, LOCK_UN) < SUCCESS) {
             perror("flock_release");
             return FLOCK_ERROR;
           }
@@ -87,7 +87,7 @@ int remove_pid(char* pid) {
       if (existence == 0) {
         if (printf("WARNING: %s%s", pid, " was not in .pids - no change made\n") < SUCCESS) {
           // release lock
-          if (flock(fd, LOCK_UN) == -1) {
+          if (flock(fd, LOCK_UN) < SUCCESS) {
             perror("flock_release");
             return FLOCK_ERROR;
           }
@@ -101,7 +101,7 @@ int remove_pid(char* pid) {
       while ((read = getline(&buf, &bufsize, temp)) > SUCCESS) {
         if (fputs(buf, pidfile) == EOF) {
           // release lock
-          if (flock(fd, LOCK_UN) == -1) {
+          if (flock(fd, LOCK_UN) < SUCCESS) {
             perror("flock_release");
             return FLOCK_ERROR;
           }
@@ -110,7 +110,7 @@ int remove_pid(char* pid) {
         }
       }
 
-      if (flock(fd, LOCK_UN) < 0) {
+      if (flock(fd, LOCK_UN) < SUCCESS) {
         perror("flock_release");
         return FLOCK_ERROR;
       }
