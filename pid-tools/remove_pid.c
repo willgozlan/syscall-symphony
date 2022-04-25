@@ -11,11 +11,24 @@ int remove_pid(char* pid) {
         perror("fopen");
         return FOPEN_ERROR;
       }
+
+      int fd = fileno(pidfile);
+      if (fd < 0) {
+        perror("fileno");
+        return FILENO_ERROR;
+      }
+
       FILE * temp;
       temp = fopen("temp", "w+");
       if (!temp) {
         perror("fopen");
         return FOPEN_ERROR;
+      }
+
+      // acquire lock
+      if (flock(fd, LOCK_EX) < 0) {
+        perror("flock (acquire)");
+        return FLOCK_ERROR;
       }
 
       char *buf;
@@ -24,6 +37,10 @@ int remove_pid(char* pid) {
 
       buf = (char *)malloc(bufsize * sizeof(char));
       if (buf == NULL) {
+        if (flock(fd, LOCK_UN) == -1) {
+          perror("flock_release");
+          return FLOCK_ERROR;
+        }
         perror("malloc");
         return MALLOC_ERROR;
       }
@@ -34,10 +51,20 @@ int remove_pid(char* pid) {
 
         if (strcmp(buf, pid) != SUCCESS) {
           if (fputs(buf, temp) == EOF) {
+            // release lock
+            if (flock(fd, LOCK_UN) == -1) {
+              perror("flock_release");
+              return FLOCK_ERROR;
+            }
             perror("fputs");
             return FPUTS_ERROR;
           }
           if (fputc('\n', temp) == EOF) {
+            // release lock
+            if (flock(fd, LOCK_UN) == -1) {
+              perror("flock_release");
+              return FLOCK_ERROR;
+            }
             perror("fputc");
             return FPUTC_ERROR;
           }
@@ -47,6 +74,11 @@ int remove_pid(char* pid) {
         }
           
         if(fflush(temp)) {
+          // release lock
+          if (flock(fd, LOCK_UN) == -1) {
+            perror("flock_release");
+            return FLOCK_ERROR;
+          }
           perror("fflush");
           return FFLUSH_ERROR;
         }
@@ -54,6 +86,11 @@ int remove_pid(char* pid) {
       
       if (existence == 0) {
         if (printf("WARNING: %s%s", pid, " was not in .pids - no change made\n") < SUCCESS) {
+          // release lock
+          if (flock(fd, LOCK_UN) == -1) {
+            perror("flock_release");
+            return FLOCK_ERROR;
+          }
           perror("printf");
           return PRINTF_ERROR;
         }
@@ -63,9 +100,19 @@ int remove_pid(char* pid) {
       pidfile = freopen(".pids", "w", pidfile);
       while ((read = getline(&buf, &bufsize, temp)) > SUCCESS) {
         if (fputs(buf, pidfile) == EOF) {
+          // release lock
+          if (flock(fd, LOCK_UN) == -1) {
+            perror("flock_release");
+            return FLOCK_ERROR;
+          }
           perror("fputs");
           return FPUTS_ERROR;
         }
+      }
+
+      if (flock(fd, LOCK_UN) < 0) {
+        perror("flock_release");
+        return FLOCK_ERROR;
       }
       if (fclose(pidfile)) {
         perror("fclose");
@@ -80,8 +127,8 @@ int remove_pid(char* pid) {
         perror("remove");
         return REMOVE_PID_ERROR;
       }
-
     }
+ 
   return SUCCESS;
 }
 
