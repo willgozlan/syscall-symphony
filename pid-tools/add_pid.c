@@ -30,13 +30,37 @@ int add_pid(int pid) {
             perror("fopen");
             return FOPEN_ERROR;
         }
+        int fd = fileno(pids);
+        if (fd < 0) {
+          perror("fileno");
+          return FILENO_ERROR;
+        }
+        // acquire lock
+        if (flock(fd, LOCK_EX) == -1) {
+          perror("flock_acquire");
+          return FLOCK_ERROR;
+        }
         if (fprintf(pids, "%d\n", pid) < SUCCESS) {
+            // release lock
+            if (flock(fd, LOCK_UN) == -1) {
+              perror("flock_release");
+              return FLOCK_ERROR;
+            }
             perror("fprintf");
             return FPRINTF_ERROR;
         }
         if (fflush(pids)) {
+            // release lock
+            if (flock(fd, LOCK_UN) == -1) {
+              perror("flock_release");
+              return FLOCK_ERROR;
+            }
             perror("fflush");
             return FFLUSH_ERROR;
+        }
+        if (flock(fd, LOCK_UN) == -1) {
+          perror("flock_release");
+          return FLOCK_ERROR;
         }
         if (fclose(pids)) {
             perror("fclose");
@@ -83,3 +107,4 @@ int main(int argc, char* argv[]) {
     }
     return SUCCESS;
 }
+
