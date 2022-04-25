@@ -8,6 +8,8 @@
 #include <unistd.h>
 #include <sys/syscall.h>
 #include <string.h>
+#include <sys/file.h>
+#include <fcntl.h>
 
 #define MAX_PID_LENGTH 10
 
@@ -34,6 +36,8 @@
 #define FPUTC_ERROR -12
 #define REMOVE_ERROR -13
 #define NO_DOT_PIDS_FILE -14
+#define FLOCK_ERROR -15
+#define FILENO_ERROR -16
 
 #define ATOI_RET_ERROR_VALUE 0
 
