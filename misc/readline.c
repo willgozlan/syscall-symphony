@@ -11,6 +11,7 @@
 #include <sys/syscall.h>
 #include <errno.h>
 #include <stdio.h>
+#include <sys/file.h>
 
 #define BUF_SIZE 10
 
