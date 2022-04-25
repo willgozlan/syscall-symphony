@@ -32,54 +32,88 @@ int play_sound(int sound) {
 
     pid_t pid;
     siginfo_t siginfo;
-    char * sound_file;
 
-    switch (sound) {
-        case READ:
-            sound_file = READ_FILE;
-            break;
-        case WRITE:
-            sound_file = WRITE_FILE;
-            break;
-        case OPEN:
-            sound_file = OPEN_FILE;
-            break;
-        case CLOSE:
-            sound_file = CLOSE_FILE;
-            break;
-        case MALLOC:
-            sound_file = MALLOC_FILE;
-            break;
-        case FREE:
-            sound_file = FREE_FILE;
-            break;
-        case FORK:
-            sound_file = FORK_FILE;
-            break;
-        case SLEEP:
-            sound_file = SLEEP_FILE;
-            break;
-        default:
-            if (printf("Input is not a valid sound MACRO.\n") < SUCCESS) {
-                perror("printf");
-                return PRINTF_ERROR;
-            }
-            if(fflush(stdout)) {
-                perror("fflush");
-                return FFLUSH_ERROR;
-            }
-            return USAGE_ERROR;
-    }
     if ((pid = syscall(__NR_fork)) < SUCCESS) {
         perror("syscall");
         return FORK_ERROR;
     }
     else if (pid == CHILD) {
         /* child */
-        char * argv[] = {"/usr/bin/aplay", sound_file, NULL};
-        if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-            perror("syscall");
-            return EXEC_ERROR;
+        switch (sound) {
+            case READ: {
+                const char * argv[] = {"/usr/bin/aplay", READ_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
+                    perror("syscall");
+                    return EXEC_ERROR;
+                }
+                break;
+            }
+            case WRITE: {
+                const char * argv[] = {"/usr/bin/aplay", WRITE_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
+                    perror("syscall");
+                    return EXEC_ERROR;
+                }
+                break;
+            }
+            case OPEN: {
+                const char * argv[] = {"/usr/bin/aplay", OPEN_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
+                    perror("syscall");
+                    return EXEC_ERROR;
+                }
+                break;
+            }
+            case CLOSE: {
+                const char * argv[] = {"/usr/bin/aplay", CLOSE_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
+                    perror("syscall");
+                    return EXEC_ERROR;
+                }
+                break;
+            }
+            case MALLOC: {
+                const char * argv[] = {"/usr/bin/aplay", MALLOC_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
+                    perror("syscall");
+                    return EXEC_ERROR;
+                }
+                break;
+            }
+            case FREE: {
+                const char * argv[] = {"/usr/bin/aplay", FREE_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
+                    perror("syscall");
+                    return EXEC_ERROR;
+                }
+                break;
+            }
+            case FORK: {
+                const char * argv[] = {"/usr/bin/aplay", FORK_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
+                    perror("syscall");
+                    return EXEC_ERROR;
+                }
+                break;
+            }
+            case SLEEP: {
+                const char * argv[] = {"/usr/bin/aplay", SLEEP_FILE, NULL};
+                if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
+                    perror("syscall");
+                    return EXEC_ERROR;
+                }
+                break;
+            }
+            default:
+                if (printf("Input is not a valid sound MACRO.\n") < SUCCESS) {
+                    perror("printf");
+                    return PRINTF_ERROR;
+                }
+                if(fflush(stdout)) {
+                    perror("fflush");
+                    return FFLUSH_ERROR;
+                }
+                return USAGE_ERROR;
         }
         return SUCCESS;
     }
