@@ -5,22 +5,25 @@
 
 #include "readline.h"
 
-//#include <stdio.h>
-#include <fcntl.h>
 #include <unistd.h>
 #include <sys/syscall.h>
 #include <errno.h>
 #include <stdio.h>
 #include <sys/file.h>
 
+
+
 #define BUF_SIZE 10
 
+#define SUCCESS 1
+#define FLOCK_ERROR 1
 
 #define SYSCALL_FAIL -1
 #define FILE_NO_EXIST -1
 #define BAD_READ -2
 #define END_OF_FILE -3
 #define BAD_CLOSE -4
+
 
 
 int readline (char *buf, int sz, const char *fn, off_t *offset)
