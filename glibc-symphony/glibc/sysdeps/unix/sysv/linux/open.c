@@ -22,9 +22,6 @@
 #include <stdarg.h>
 
 // We added:
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
 #include "../../../../misc/play_sound_from_wrapper.h"
 
 #include <sysdep-cancel.h>
