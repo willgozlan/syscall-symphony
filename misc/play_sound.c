@@ -16,14 +16,14 @@
 #define WAITID_ERROR -6
 
 // FILEPATH MACROS
-#define READ_FILE "/home/pi/syscall-symphony/sounds/read.wav"
-#define WRITE_FILE "/home/pi/syscall-symphony/sounds/write.wav"
-#define OPEN_FILE "/home/pi/syscall-symphony/sounds/open.wav"
-#define CLOSE_FILE "/home/pi/syscall-symphony/sounds/close.wav"
-#define MALLOC_FILE "/home/pi/syscall-symphony/sounds/malloc.wav"
-#define FREE_FILE "/home/pi/syscall-symphony/sounds/free.wav"
-#define FORK_FILE "/home/pi/syscall-symphony/sounds/fork.wav"
-#define SLEEP_FILE "/home/pi/syscall-symphony/sounds/sleep.wav"
+#define READ_FILE "/syscall-symphony/sounds/read.wav"
+#define WRITE_FILE "/syscall-symphony/sounds/write.wav"
+#define OPEN_FILE "/syscall-symphony/sounds/open.wav"
+#define CLOSE_FILE "/syscall-symphony/sounds/close.wav"
+#define MALLOC_FILE "/syscall-symphony/sounds/malloc.wav"
+#define FREE_FILE "/syscall-symphony/sounds/free.wav"
+#define FORK_FILE "/syscall-symphony/sounds/fork.wav"
+#define SLEEP_FILE "/syscall-symphony/sounds/sleep.wav"
 
 // Other Constants
 #define CHILD 0
