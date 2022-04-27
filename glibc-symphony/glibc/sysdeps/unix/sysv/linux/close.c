@@ -16,7 +16,7 @@
    License along with the GNU C Library; if not, see
    <https://www.gnu.org/licenses/>.  */
 
-#include <unistd.h>
+// #include <unistd.h> Removed bc already included in our header
 #include <sysdep-cancel.h>
 #include <not-cancel.h>
 

@@ -213,7 +213,7 @@
 
 #include <stddef.h>   /* for size_t */
 #include <stdlib.h>   /* for getenv(), abort() */
-#include <unistd.h>   /* for __libc_enable_secure */
+// #include <unistd.h>    for __libc_enable_secure   Removing as included in our wrapper
 
 #include <atomic.h>
 #include <_itoa.h>

@@ -17,7 +17,7 @@
    <https://www.gnu.org/licenses/>.  */
 
 #include <time.h>
-#include <unistd.h>
+// #include <unistd.h>  Removed because included in our header wrapper
 #include <errno.h>
 #include <sys/param.h>
 

@@ -36,11 +36,11 @@ int readline (char *buf, int sz, const char *fn, off_t *offset)
         return FILE_NO_EXIST;
     }
 
-    // acquire lock
+   /* // acquire lock
     if (syscall(__NR_flock, fd, LOCK_EX) < SUCCESS) { //flock(fd, LOCK_EX) < SUCCESS) {
       perror("flock (acquire)");
       return FLOCK_ERROR;
-    }
+    }*/
 
     int nchr = 0;
     int idx = 0;
@@ -55,20 +55,20 @@ int readline (char *buf, int sz, const char *fn, off_t *offset)
     // Read/Lseek error
     if(nchr == SYSCALL_FAIL) 
     {
-        // release lock
+     /*   // release lock
         if (syscall(__NR_flock, fd, LOCK_UN) < SUCCESS){             // flock(fd, LOCK_UN) < SUCCESS) {
           perror("flock (release)");
           return FLOCK_ERROR;
-        }  
+        }  */
 	perror("lseek/read"); 
         return BAD_READ;
     }
 
-    // release lock
+  /*  // release lock
     if (syscall(__NR_flock, fd, LOCK_UN) < SUCCESS){  //flock(fd, LOCK_UN) < SUCCESS) {
       perror("flock (release)");
       return FLOCK_ERROR;
-    }
+    }*/
     // Close file, checking for error
     if(syscall(__NR_close, fd) == SYSCALL_FAIL) 
     {
