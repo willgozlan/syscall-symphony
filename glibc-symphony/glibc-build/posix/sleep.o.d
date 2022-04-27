@@ -36,15 +36,7 @@ $(common-objpfx)posix/sleep.o: \
  ../sysdeps/unix/sysv/linux/bits/types/__sigset_t.h \
  ../sysdeps/unix/sysv/linux/time-clockid.h ../include/stdint.h \
  ../stdlib/stdint.h ../bits/libc-header-start.h ../bits/wchar.h \
- ../bits/stdint-intn.h ../bits/stdint-uintn.h ../include/unistd.h \
- ../posix/unistd.h ../sysdeps/unix/sysv/linux/bits/posix_opt.h \
- ../bits/environments.h ../bits/confname.h ../include/bits/getopt_posix.h \
- ../posix/bits/getopt_posix.h ../include/bits/getopt_core.h \
- ../posix/bits/getopt_core.h ../include/bits/unistd_ext.h \
- ../sysdeps/unix/sysv/linux/bits/unistd_ext.h \
- /usr/include/linux/close_range.h \
- ../sysdeps/unix/sysv/linux/arm/kernel-features.h \
- ../sysdeps/unix/sysv/linux/kernel-features.h ../include/errno.h \
+ ../bits/stdint-intn.h ../bits/stdint-uintn.h ../include/errno.h \
  ../stdlib/errno.h ../sysdeps/unix/sysv/linux/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/arm-linux-gnueabihf/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
@@ -90,7 +82,15 @@ $(common-objpfx)posix/sleep.o: \
  /usr/include/asm-generic/param.h \
  ../sysdeps/posix/../../misc/play_sound_from_wrapper.h \
  ../sysdeps/posix/../../misc/play_sound.h \
- ../sysdeps/posix/../../misc/pid_exists.h
+ ../sysdeps/posix/../../misc/pid_exists.h ../include/unistd.h \
+ ../posix/unistd.h ../sysdeps/unix/sysv/linux/bits/posix_opt.h \
+ ../bits/environments.h ../bits/confname.h ../include/bits/getopt_posix.h \
+ ../posix/bits/getopt_posix.h ../include/bits/getopt_core.h \
+ ../posix/bits/getopt_core.h ../include/bits/unistd_ext.h \
+ ../sysdeps/unix/sysv/linux/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h \
+ ../sysdeps/unix/sysv/linux/arm/kernel-features.h \
+ ../sysdeps/unix/sysv/linux/kernel-features.h
 ../include/stdc-predef.h:
 $(common-objpfx)libc-modules.h:
 ../include/libc-symbols.h:
@@ -161,20 +161,6 @@ $(common-objpfx)config.h:
 ../bits/wchar.h:
 ../bits/stdint-intn.h:
 ../bits/stdint-uintn.h:
-../include/unistd.h:
-../posix/unistd.h:
-../sysdeps/unix/sysv/linux/bits/posix_opt.h:
-../bits/environments.h:
-../bits/confname.h:
-../include/bits/getopt_posix.h:
-../posix/bits/getopt_posix.h:
-../include/bits/getopt_core.h:
-../posix/bits/getopt_core.h:
-../include/bits/unistd_ext.h:
-../sysdeps/unix/sysv/linux/bits/unistd_ext.h:
-/usr/include/linux/close_range.h:
-../sysdeps/unix/sysv/linux/arm/kernel-features.h:
-../sysdeps/unix/sysv/linux/kernel-features.h:
 ../include/errno.h:
 ../stdlib/errno.h:
 ../sysdeps/unix/sysv/linux/bits/errno.h:
@@ -244,3 +230,17 @@ $(common-objpfx)config.h:
 ../sysdeps/posix/../../misc/play_sound_from_wrapper.h:
 ../sysdeps/posix/../../misc/play_sound.h:
 ../sysdeps/posix/../../misc/pid_exists.h:
+../include/unistd.h:
+../posix/unistd.h:
+../sysdeps/unix/sysv/linux/bits/posix_opt.h:
+../bits/environments.h:
+../bits/confname.h:
+../include/bits/getopt_posix.h:
+../posix/bits/getopt_posix.h:
+../include/bits/getopt_core.h:
+../posix/bits/getopt_core.h:
+../include/bits/unistd_ext.h:
+../sysdeps/unix/sysv/linux/bits/unistd_ext.h:
+/usr/include/linux/close_range.h:
+../sysdeps/unix/sysv/linux/arm/kernel-features.h:
+../sysdeps/unix/sysv/linux/kernel-features.h:

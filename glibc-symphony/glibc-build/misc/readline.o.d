@@ -51,7 +51,8 @@ $(common-objpfx)misc/readline.o: readline.c \
  ../include/bits/stdio.h ../libio/bits/stdio.h ../libio/libio.h \
  ../include/bits/types/wint_t.h ../wcsmbs/bits/types/wint_t.h \
  ../include/gconv.h ../iconv/gconv.h ../include/shlib-compat.h \
- $(common-objpfx)abi-versions.h
+ $(common-objpfx)abi-versions.h \
+ ../include/sys/file.h ../misc/sys/file.h
 ../include/stdc-predef.h:
 $(common-objpfx)libc-modules.h:
 ../include/libc-symbols.h:
@@ -148,3 +149,5 @@ $(common-objpfx)bits/stdio_lim.h:
 ../iconv/gconv.h:
 ../include/shlib-compat.h:
 $(common-objpfx)abi-versions.h:
+../include/sys/file.h:
+../misc/sys/file.h:

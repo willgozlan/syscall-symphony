@@ -9,7 +9,7 @@ int main(void)
 {
 
 	printf("PID: %d\n", getpid());
-	//getc(stdin);
+	getc(stdin);
 
 	void* malloc_test = malloc(10);
 
