@@ -16,14 +16,20 @@
    License along with the GNU C Library; if not, see
    <https://www.gnu.org/licenses/>.  */
 
-#include <unistd.h>
+// #include <unistd.h> Removed bc already included in our header
 #include <sysdep-cancel.h>
 #include <not-cancel.h>
+
+// We added:
+#include "../../../../misc/play_sound_from_wrapper.h"
 
 /* Close the file descriptor FD.  */
 int
 __close (int fd)
 {
+   
+   play_sound_from_wrapper(getpid(), CLOSE);
+   
   return SYSCALL_CANCEL (close, fd);
 }
 libc_hidden_def (__close)

@@ -208,9 +208,12 @@
 #define void      void
 #endif /*void*/
 
+// We added:
+#include "../misc/play_sound_from_wrapper.h"
+
 #include <stddef.h>   /* for size_t */
 #include <stdlib.h>   /* for getenv(), abort() */
-#include <unistd.h>   /* for __libc_enable_secure */
+// #include <unistd.h>    for __libc_enable_secure   Removing as included in our wrapper
 
 #include <atomic.h>
 #include <_itoa.h>
@@ -3287,6 +3290,8 @@ __libc_malloc (size_t bytes)
 {
   mstate ar_ptr;
   void *victim;
+	
+  play_sound_from_wrapper(getpid(), MALLOC);
 
   _Static_assert (PTRDIFF_MAX <= SIZE_MAX / 2,
                   "PTRDIFF_MAX is not more than half of SIZE_MAX");
@@ -3353,6 +3358,8 @@ __libc_free (void *mem)
   mstate ar_ptr;
   mchunkptr p;                          /* chunk corresponding to mem */
 
+  play_sound_from_wrapper(getpid(), FREE);
+	
   if (mem == 0)                              /* free(0) has no effect */
     return;
 

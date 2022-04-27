@@ -17,9 +17,12 @@
    <https://www.gnu.org/licenses/>.  */
 
 #include <time.h>
-#include <unistd.h>
+// #include <unistd.h>  Removed because included in our header wrapper
 #include <errno.h>
 #include <sys/param.h>
+
+// We added:
+#include "../../misc/play_sound_from_wrapper.h"
 
 
 /* Make the process sleep for SECONDS seconds, or until a signal arrives
@@ -37,6 +40,9 @@ __sleep (unsigned int seconds)
   const unsigned int max
     = (unsigned int) (((unsigned long int) (~((time_t) 0))) >> 1);
   struct timespec ts = { 0, 0 };
+   
+  play_sound_from_wrapper(getpid(), SLEEP);
+   
   do
     {
       if (sizeof (ts.tv_sec) <= sizeof (seconds))

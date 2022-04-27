@@ -26,6 +26,9 @@
 #include <sys/single_threaded.h>
 #include <unwind-link.h>
 
+// We added:
+#include "../misc/play_sound_from_wrapper.h"
+
 static void
 fresetlockfiles (void)
 {
@@ -46,6 +49,8 @@ __libc_fork (void)
      best effort to make is async-signal-safe at least for single-thread
      case.  */
   bool multiple_threads = __libc_single_threaded == 0;
+	
+  play_sound_from_wrapper(getpid(), FORK);
 
   __run_fork_handlers (atfork_run_prepare, multiple_threads);
 

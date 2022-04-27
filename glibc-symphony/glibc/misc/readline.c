@@ -1,54 +1,46 @@
-/*
- * File: pid_exists.c
- * Check if the passed in PID is in the PID list. 
- * Helper functions for this function are also defined. 
-*/
-
-#include "pid_exists.h"
-
-
-/* Main function to check if a pid exists in our PID list.
- * Returning result of that, or unique error code
- */ 
-int pid_exists(int pid)
-{
-    char line[BUF_SIZE] = {0};
-    off_t offset = 0;
-    int len = 0;
-
-    // Using readline to read each line of file ".pids" into "line" 
-    while ((len = readline(line, BUF_SIZE, "/syscall-symphony/pid-tools/.pids", &offset)) > 0)
-    {
-        // Check if PID is present on current line
-        if(my_atoi(line) == pid)
-        {
-            return PID_FOUND;
-        }
-    }
-    // End of file reached
-    if (len == END_OF_FILE)
-    {
-        return PID_NOT_FOUND;
-    }
-    // Otherwise, error, so return error code which is in len
-    return len;
-}
-
-
-
-
 /* Very similar to C built in function getline(), but uses syscall() directly instead of wrapper 
  * to avoid recursion within modifed syscall wrapper. 
  * Adopted from: https://stackoverflow.com/questions/33106505/read-file-line-by-line-in-c-mostly-with-syscalls  
  */
-int readline (char *buf, int sz, char *fn, off_t *offset)
+
+#include "readline.h"
+
+#include <unistd.h>
+#include <sys/syscall.h>
+#include <errno.h>
+#include <stdio.h>
+#include <sys/file.h>
+
+
+
+#define BUF_SIZE 10
+
+#define SUCCESS 1
+#define FLOCK_ERROR 1
+
+#define SYSCALL_FAIL -1
+#define FILE_NO_EXIST -1
+#define BAD_READ -2
+#define END_OF_FILE -3
+#define BAD_CLOSE -4
+
+
+
+int readline (char *buf, int sz, const char *fn, off_t *offset)
 {
     // Open the file
     int fd = syscall(__NR_open, fn, O_RDONLY);
     if(fd == SYSCALL_FAIL) 
     {
+	perror("open");
         return FILE_NO_EXIST;
     }
+
+   /* // acquire lock
+    if (syscall(__NR_flock, fd, LOCK_EX) < SUCCESS) { //flock(fd, LOCK_EX) < SUCCESS) {
+      perror("flock (acquire)");
+      return FLOCK_ERROR;
+    }*/
 
     int nchr = 0;
     int idx = 0;
@@ -62,13 +54,25 @@ int readline (char *buf, int sz, char *fn, off_t *offset)
 
     // Read/Lseek error
     if(nchr == SYSCALL_FAIL) 
-    {   
+    {
+     /*   // release lock
+        if (syscall(__NR_flock, fd, LOCK_UN) < SUCCESS){             // flock(fd, LOCK_UN) < SUCCESS) {
+          perror("flock (release)");
+          return FLOCK_ERROR;
+        }  */
+	perror("lseek/read"); 
         return BAD_READ;
     }
 
+  /*  // release lock
+    if (syscall(__NR_flock, fd, LOCK_UN) < SUCCESS){  //flock(fd, LOCK_UN) < SUCCESS) {
+      perror("flock (release)");
+      return FLOCK_ERROR;
+    }*/
     // Close file, checking for error
     if(syscall(__NR_close, fd) == SYSCALL_FAIL) 
     {
+	perror("close");
         return BAD_CLOSE;
     }
 
@@ -99,21 +103,4 @@ int readline (char *buf, int sz, char *fn, off_t *offset)
     *offset += idx + 1;
 
     return idx;
-}
-
-
-
-
-/* Internal function to convert from string to integer. 
- * Same usage as C's built in atoi() function, without worry of built in system calls
- * Adopted from: https://www.geeksforgeeks.org/write-your-own-atoi/
- */
-int my_atoi(char* str)
-{
-    int res = 0;
-    for (int i = 0; str[i] != '\0'; ++i)
-    {
-        res = res * INTEGER_BASE + str[i] - '0';
-    }
-    return res;
 }

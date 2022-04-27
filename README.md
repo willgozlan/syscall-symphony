@@ -25,3 +25,5 @@ Navigate into the `glibc-symphony/glibc-build` directory and run the following, 
 
 
 
+Path to open.c:
+/home/pi/syscall-symphony/glibc-symphony/glibc/sysdeps/unix/sysv/linux/open.c

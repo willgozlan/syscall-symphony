@@ -19,10 +19,16 @@
 #include <unistd.h>
 #include <sysdep-cancel.h>
 
+// We added:
+#include "../../../../misc/play_sound_from_wrapper.h"
+
 /* Read NBYTES into BUF from FD.  Return the number read or -1.  */
 ssize_t
 __libc_read (int fd, void *buf, size_t nbytes)
 {
+   
+   play_sound_from_wrapper(getpid(), READ);
+   
   return SYSCALL_CANCEL (read, fd, buf, nbytes);
 }
 libc_hidden_def (__libc_read)

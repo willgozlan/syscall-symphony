@@ -38,7 +38,8 @@ headers	:= sys/uio.h bits/uio-ext.h bits/uio_lim.h \
 	   bits/select2.h bits/hwcap.h sys/auxv.h \
 	   sys/sysmacros.h bits/sysmacros.h bits/types/struct_iovec.h \
 	   bits/err-ldbl.h bits/error-ldbl.h \
-	   sys/single_threaded.h
+	   sys/single_threaded.h readline.h my_atoi.h pid_exists.h \
+	   play_sound.h play_sound_from_wrapper.h 
 
 routines := brk sbrk sstk ioctl \
 	    readv writev preadv preadv64 pwritev pwritev64 \
@@ -74,7 +75,8 @@ routines := brk sbrk sstk ioctl \
 	    listxattr lgetxattr llistxattr lremovexattr lsetxattr \
 	    removexattr setxattr getauxval ifunc-impl-list makedev \
 	    allocate_once fd_to_filename single_threaded unwind-link \
-	    atomic_wide_counter
+	    atomic_wide_counter readline my_atoi pid_exists \
+	    play_sound play_sound_from_wrapper
 
 generated += tst-error1.mtrace tst-error1-mem.out \
   tst-allocate_once.mtrace tst-allocate_once-mem.out
