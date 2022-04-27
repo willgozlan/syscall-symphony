@@ -49,39 +49,10 @@ $(common-objpfx)io/open.o: \
  ../sysdeps/unix/sysv/linux/bits/fcntl-linux.h \
  ../include/bits/types/struct_iovec.h ../misc/bits/types/struct_iovec.h \
  /usr/include/linux/falloc.h \
- /usr/lib/gcc/arm-linux-gnueabihf/10/include/stdarg.h ../include/stdlib.h \
- ../bits/floatn.h ../bits/floatn-common.h ../stdlib/stdlib.h \
- ../bits/libc-header-start.h ../sysdeps/unix/sysv/linux/bits/waitflags.h \
- ../bits/waitstatus.h ../include/bits/types/locale_t.h \
- ../locale/bits/types/locale_t.h ../include/bits/types/__locale_t.h \
- ../locale/bits/types/__locale_t.h ../include/alloca.h ../stdlib/alloca.h \
- ../include/stackinfo.h ../sysdeps/arm/stackinfo.h ../include/elf.h \
- ../elf/elf.h ../include/stdint.h ../stdlib/stdint.h ../bits/wchar.h \
- ../bits/stdint-uintn.h ../include/libc-pointer-arith.h \
- ../sysdeps/generic/dl-dtprocnum.h ../sysdeps/pthread/allocalim.h \
- ../include/limits.h /usr/lib/gcc/arm-linux-gnueabihf/10/include/limits.h \
- ../include/bits/posix1_lim.h ../posix/bits/posix1_lim.h \
- ../sysdeps/unix/sysv/linux/bits/local_lim.h /usr/include/linux/limits.h \
- ../sysdeps/unix/sysv/linux/include/bits/pthread_stack_min-dynamic.h \
- ../sysdeps/unix/sysv/linux/bits/pthread_stack_min.h \
- ../include/bits/posix2_lim.h ../posix/bits/posix2_lim.h \
- ../include/bits/xopen_lim.h ../sysdeps/unix/sysv/linux/bits/uio_lim.h \
- ../bits/stdlib-bsearch.h ../include/bits/stdlib-float.h \
- ../stdlib/bits/stdlib-float.h ../include/rtld-malloc.h \
- ../include/stdio.h ../libio/stdio.h ../include/bits/types/__fpos_t.h \
- ../libio/bits/types/__fpos_t.h ../include/bits/types/__mbstate_t.h \
- ../wcsmbs/bits/types/__mbstate_t.h ../include/bits/types/__fpos64_t.h \
- ../libio/bits/types/__fpos64_t.h ../include/bits/types/__FILE.h \
- ../libio/bits/types/__FILE.h ../include/bits/types/FILE.h \
- ../libio/bits/types/FILE.h ../include/bits/types/struct_FILE.h \
- ../libio/bits/types/struct_FILE.h \
- ../include/bits/types/cookie_io_functions_t.h \
- ../libio/bits/types/cookie_io_functions_t.h \
- $(common-objpfx)bits/stdio_lim.h \
- ../include/bits/stdio.h ../libio/bits/stdio.h ../libio/libio.h \
- ../include/bits/types/wint_t.h ../wcsmbs/bits/types/wint_t.h \
- ../include/gconv.h ../iconv/gconv.h ../include/shlib-compat.h \
- $(common-objpfx)abi-versions.h \
+ /usr/lib/gcc/arm-linux-gnueabihf/10/include/stdarg.h \
+ ../sysdeps/unix/sysv/linux/../../../../misc/play_sound_from_wrapper.h \
+ ../sysdeps/unix/sysv/linux/../../../../misc/play_sound.h \
+ ../sysdeps/unix/sysv/linux/../../../../misc/pid_exists.h \
  ../include/unistd.h ../posix/unistd.h \
  ../sysdeps/unix/sysv/linux/bits/posix_opt.h ../bits/environments.h \
  ../bits/confname.h ../include/bits/getopt_posix.h \
@@ -91,9 +62,6 @@ $(common-objpfx)io/open.o: \
  /usr/include/linux/close_range.h \
  ../sysdeps/unix/sysv/linux/arm/kernel-features.h \
  ../sysdeps/unix/sysv/linux/kernel-features.h \
- ../sysdeps/unix/sysv/linux/../../../../misc/play_sound_from_wrapper.h \
- ../sysdeps/unix/sysv/linux/../../../../misc/play_sound.h \
- ../sysdeps/unix/sysv/linux/../../../../misc/pid_exists.h \
  ../sysdeps/unix/sysv/linux/sysdep-cancel.h \
  ../sysdeps/unix/sysv/linux/arm/sysdep.h \
  ../sysdeps/unix/sysv/linux/sysdep.h ../include/errno.h ../stdlib/errno.h \
@@ -105,9 +73,18 @@ $(common-objpfx)io/open.o: \
  ../sysdeps/generic/dwarf2.h ../sysdeps/unix/sysv/linux/single-thread.h \
  ../sysdeps/unix/sysv/linux/include/sys/syscall.h \
  ../sysdeps/unix/sysv/linux/arm/arch-syscall.h ../sysdeps/arm/sysdep.h \
+ ../include/stdint.h ../stdlib/stdint.h ../bits/libc-header-start.h \
+ ../bits/wchar.h ../bits/stdint-uintn.h \
  ../sysdeps/unix/sysv/linux/dl-sysdep.h ../sysdeps/arm/dl-sysdep.h \
  ../sysdeps/generic/dl-sysdep.h ../sysdeps/unix/sysv/linux/arm/tls.h \
  ../sysdeps/arm/nptl/tls.h ../sysdeps/generic/dl-dtv.h ../nptl/descr.h \
+ ../include/limits.h /usr/lib/gcc/arm-linux-gnueabihf/10/include/limits.h \
+ ../include/bits/posix1_lim.h ../posix/bits/posix1_lim.h \
+ ../sysdeps/unix/sysv/linux/bits/local_lim.h /usr/include/linux/limits.h \
+ ../sysdeps/unix/sysv/linux/include/bits/pthread_stack_min-dynamic.h \
+ ../sysdeps/unix/sysv/linux/bits/pthread_stack_min.h \
+ ../include/bits/posix2_lim.h ../posix/bits/posix2_lim.h \
+ ../include/bits/xopen_lim.h ../sysdeps/unix/sysv/linux/bits/uio_lim.h \
  ../include/sched.h ../posix/sched.h \
  ../sysdeps/unix/sysv/linux/bits/sched.h \
  ../bits/types/struct_sched_param.h ../include/bits/cpu-set.h \
@@ -120,7 +97,9 @@ $(common-objpfx)io/open.o: \
  ../sysdeps/unix/sysv/linux/bits/timex.h \
  ../include/bits/types/struct_tm.h ../time/bits/types/struct_tm.h \
  ../include/bits/types/struct_itimerspec.h \
- ../time/bits/types/struct_itimerspec.h ../time/mktime-internal.h \
+ ../time/bits/types/struct_itimerspec.h ../include/bits/types/locale_t.h \
+ ../locale/bits/types/locale_t.h ../include/bits/types/__locale_t.h \
+ ../locale/bits/types/__locale_t.h ../time/mktime-internal.h \
  ../include/sys/time.h ../time/sys/time.h \
  ../sysdeps/unix/sysv/linux/time-clockid.h \
  ../sysdeps/generic/hp-timing-common.h ../include/string.h \
@@ -150,12 +129,19 @@ $(common-objpfx)io/open.o: \
  ../signal/bits/types/struct_sigstack.h \
  ../sysdeps/pthread/bits/sigthread.h \
  ../sysdeps/unix/sysv/linux/bits/signal_ext.h \
- ../sysdeps/unix/sysv/linux/sigsetops.h \
+ ../sysdeps/unix/sysv/linux/sigsetops.h ../include/libc-pointer-arith.h \
  ../sysdeps/unix/sysv/linux/bits/param.h /usr/include/linux/param.h \
  /usr/include/arm-linux-gnueabihf/asm/param.h \
  /usr/include/asm-generic/param.h ../sysdeps/generic/_itoa.h \
  ../include/list_t.h ../sysdeps/nptl/lowlevellock.h ../include/atomic.h \
- ../sysdeps/unix/sysv/linux/arm/atomic-machine.h \
+ ../include/stdlib.h ../bits/floatn.h ../bits/floatn-common.h \
+ ../stdlib/stdlib.h ../sysdeps/unix/sysv/linux/bits/waitflags.h \
+ ../bits/waitstatus.h ../include/alloca.h ../stdlib/alloca.h \
+ ../include/stackinfo.h ../sysdeps/arm/stackinfo.h ../include/elf.h \
+ ../elf/elf.h ../sysdeps/generic/dl-dtprocnum.h \
+ ../sysdeps/pthread/allocalim.h ../bits/stdlib-bsearch.h \
+ ../include/bits/stdlib-float.h ../stdlib/bits/stdlib-float.h \
+ ../include/rtld-malloc.h ../sysdeps/unix/sysv/linux/arm/atomic-machine.h \
  ../sysdeps/arm/atomic-machine.h ../sysdeps/pthread/elision-conf.h \
  ../sysdeps/nptl/lowlevellock-futex.h ../sysdeps/arm/nptl/pthreaddef.h \
  ../sysdeps/nptl/thread_db.h ../include/pthread.h \
@@ -271,72 +257,9 @@ $(common-objpfx)config.h:
 ../misc/bits/types/struct_iovec.h:
 /usr/include/linux/falloc.h:
 /usr/lib/gcc/arm-linux-gnueabihf/10/include/stdarg.h:
-../include/stdlib.h:
-../bits/floatn.h:
-../bits/floatn-common.h:
-../stdlib/stdlib.h:
-../bits/libc-header-start.h:
-../sysdeps/unix/sysv/linux/bits/waitflags.h:
-../bits/waitstatus.h:
-../include/bits/types/locale_t.h:
-../locale/bits/types/locale_t.h:
-../include/bits/types/__locale_t.h:
-../locale/bits/types/__locale_t.h:
-../include/alloca.h:
-../stdlib/alloca.h:
-../include/stackinfo.h:
-../sysdeps/arm/stackinfo.h:
-../include/elf.h:
-../elf/elf.h:
-../include/stdint.h:
-../stdlib/stdint.h:
-../bits/wchar.h:
-../bits/stdint-uintn.h:
-../include/libc-pointer-arith.h:
-../sysdeps/generic/dl-dtprocnum.h:
-../sysdeps/pthread/allocalim.h:
-../include/limits.h:
-/usr/lib/gcc/arm-linux-gnueabihf/10/include/limits.h:
-../include/bits/posix1_lim.h:
-../posix/bits/posix1_lim.h:
-../sysdeps/unix/sysv/linux/bits/local_lim.h:
-/usr/include/linux/limits.h:
-../sysdeps/unix/sysv/linux/include/bits/pthread_stack_min-dynamic.h:
-../sysdeps/unix/sysv/linux/bits/pthread_stack_min.h:
-../include/bits/posix2_lim.h:
-../posix/bits/posix2_lim.h:
-../include/bits/xopen_lim.h:
-../sysdeps/unix/sysv/linux/bits/uio_lim.h:
-../bits/stdlib-bsearch.h:
-../include/bits/stdlib-float.h:
-../stdlib/bits/stdlib-float.h:
-../include/rtld-malloc.h:
-../include/stdio.h:
-../libio/stdio.h:
-../include/bits/types/__fpos_t.h:
-../libio/bits/types/__fpos_t.h:
-../include/bits/types/__mbstate_t.h:
-../wcsmbs/bits/types/__mbstate_t.h:
-../include/bits/types/__fpos64_t.h:
-../libio/bits/types/__fpos64_t.h:
-../include/bits/types/__FILE.h:
-../libio/bits/types/__FILE.h:
-../include/bits/types/FILE.h:
-../libio/bits/types/FILE.h:
-../include/bits/types/struct_FILE.h:
-../libio/bits/types/struct_FILE.h:
-../include/bits/types/cookie_io_functions_t.h:
-../libio/bits/types/cookie_io_functions_t.h:
-$(common-objpfx)bits/stdio_lim.h:
-../include/bits/stdio.h:
-../libio/bits/stdio.h:
-../libio/libio.h:
-../include/bits/types/wint_t.h:
-../wcsmbs/bits/types/wint_t.h:
-../include/gconv.h:
-../iconv/gconv.h:
-../include/shlib-compat.h:
-$(common-objpfx)abi-versions.h:
+../sysdeps/unix/sysv/linux/../../../../misc/play_sound_from_wrapper.h:
+../sysdeps/unix/sysv/linux/../../../../misc/play_sound.h:
+../sysdeps/unix/sysv/linux/../../../../misc/pid_exists.h:
 ../include/unistd.h:
 ../posix/unistd.h:
 ../sysdeps/unix/sysv/linux/bits/posix_opt.h:
@@ -351,9 +274,6 @@ $(common-objpfx)abi-versions.h:
 /usr/include/linux/close_range.h:
 ../sysdeps/unix/sysv/linux/arm/kernel-features.h:
 ../sysdeps/unix/sysv/linux/kernel-features.h:
-../sysdeps/unix/sysv/linux/../../../../misc/play_sound_from_wrapper.h:
-../sysdeps/unix/sysv/linux/../../../../misc/play_sound.h:
-../sysdeps/unix/sysv/linux/../../../../misc/pid_exists.h:
 ../sysdeps/unix/sysv/linux/sysdep-cancel.h:
 ../sysdeps/unix/sysv/linux/arm/sysdep.h:
 ../sysdeps/unix/sysv/linux/sysdep.h:
@@ -373,6 +293,11 @@ $(common-objpfx)abi-versions.h:
 ../sysdeps/unix/sysv/linux/include/sys/syscall.h:
 ../sysdeps/unix/sysv/linux/arm/arch-syscall.h:
 ../sysdeps/arm/sysdep.h:
+../include/stdint.h:
+../stdlib/stdint.h:
+../bits/libc-header-start.h:
+../bits/wchar.h:
+../bits/stdint-uintn.h:
 ../sysdeps/unix/sysv/linux/dl-sysdep.h:
 ../sysdeps/arm/dl-sysdep.h:
 ../sysdeps/generic/dl-sysdep.h:
@@ -380,6 +305,18 @@ $(common-objpfx)abi-versions.h:
 ../sysdeps/arm/nptl/tls.h:
 ../sysdeps/generic/dl-dtv.h:
 ../nptl/descr.h:
+../include/limits.h:
+/usr/lib/gcc/arm-linux-gnueabihf/10/include/limits.h:
+../include/bits/posix1_lim.h:
+../posix/bits/posix1_lim.h:
+../sysdeps/unix/sysv/linux/bits/local_lim.h:
+/usr/include/linux/limits.h:
+../sysdeps/unix/sysv/linux/include/bits/pthread_stack_min-dynamic.h:
+../sysdeps/unix/sysv/linux/bits/pthread_stack_min.h:
+../include/bits/posix2_lim.h:
+../posix/bits/posix2_lim.h:
+../include/bits/xopen_lim.h:
+../sysdeps/unix/sysv/linux/bits/uio_lim.h:
 ../include/sched.h:
 ../posix/sched.h:
 ../sysdeps/unix/sysv/linux/bits/sched.h:
@@ -401,6 +338,10 @@ $(common-objpfx)abi-versions.h:
 ../time/bits/types/struct_tm.h:
 ../include/bits/types/struct_itimerspec.h:
 ../time/bits/types/struct_itimerspec.h:
+../include/bits/types/locale_t.h:
+../locale/bits/types/locale_t.h:
+../include/bits/types/__locale_t.h:
+../locale/bits/types/__locale_t.h:
 ../time/mktime-internal.h:
 ../include/sys/time.h:
 ../time/sys/time.h:
@@ -447,6 +388,7 @@ $(common-objpfx)abi-versions.h:
 ../sysdeps/pthread/bits/sigthread.h:
 ../sysdeps/unix/sysv/linux/bits/signal_ext.h:
 ../sysdeps/unix/sysv/linux/sigsetops.h:
+../include/libc-pointer-arith.h:
 ../sysdeps/unix/sysv/linux/bits/param.h:
 /usr/include/linux/param.h:
 /usr/include/arm-linux-gnueabihf/asm/param.h:
@@ -455,6 +397,24 @@ $(common-objpfx)abi-versions.h:
 ../include/list_t.h:
 ../sysdeps/nptl/lowlevellock.h:
 ../include/atomic.h:
+../include/stdlib.h:
+../bits/floatn.h:
+../bits/floatn-common.h:
+../stdlib/stdlib.h:
+../sysdeps/unix/sysv/linux/bits/waitflags.h:
+../bits/waitstatus.h:
+../include/alloca.h:
+../stdlib/alloca.h:
+../include/stackinfo.h:
+../sysdeps/arm/stackinfo.h:
+../include/elf.h:
+../elf/elf.h:
+../sysdeps/generic/dl-dtprocnum.h:
+../sysdeps/pthread/allocalim.h:
+../bits/stdlib-bsearch.h:
+../include/bits/stdlib-float.h:
+../stdlib/bits/stdlib-float.h:
+../include/rtld-malloc.h:
 ../sysdeps/unix/sysv/linux/arm/atomic-machine.h:
 ../sysdeps/arm/atomic-machine.h:
 ../sysdeps/pthread/elision-conf.h:

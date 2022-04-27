@@ -1,5 +1,5 @@
-$(common-objpfx)stdlib/mod_1.os: \
- mod_1.c ../include/stdc-predef.h \
+$(common-objpfx)stdlib/mod_1.os: mod_1.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

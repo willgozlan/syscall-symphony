@@ -1,5 +1,5 @@
-$(common-objpfx)time/dysize.os: \
- dysize.c ../include/stdc-predef.h \
+$(common-objpfx)time/dysize.os: dysize.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

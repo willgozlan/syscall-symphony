@@ -1,5 +1,5 @@
-$(common-objpfx)posix/getconf.o: \
- getconf.c ../include/stdc-predef.h \
+$(common-objpfx)posix/getconf.o: getconf.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \
@@ -94,8 +94,8 @@ $(common-objpfx)posix/getconf.o: \
  ../include/bits/stdio.h ../libio/bits/stdio.h ../libio/libio.h \
  ../include/bits/types/wint_t.h ../wcsmbs/bits/types/wint_t.h \
  ../include/gconv.h ../iconv/gconv.h ../include/shlib-compat.h \
- $(common-objpfx)abi-versions.h \
- ../version.h posix-conf-vars.h \
+ $(common-objpfx)abi-versions.h ../version.h \
+ posix-conf-vars.h \
  $(common-objpfx)posix/posix-conf-vars-def.h
 ../include/stdc-predef.h:
 $(common-objpfx)libc-modules.h:

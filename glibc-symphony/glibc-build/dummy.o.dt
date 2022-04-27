@@ -1,13 +1,13 @@
-/home/pi/syscall-symphony/glibc-symphony/glibc-build/dummy.o: \
- /home/pi/syscall-symphony/glibc-symphony/glibc-build/dummy.c \
+/syscall-symphony/glibc-symphony/glibc-build/dummy.o: \
+ /syscall-symphony/glibc-symphony/glibc-build/dummy.c \
  ../include/stdc-predef.h \
- /home/pi/syscall-symphony/glibc-symphony/glibc-build/libc-modules.h \
+ /syscall-symphony/glibc-symphony/glibc-build/libc-modules.h \
  ../include/libc-symbols.h \
- /home/pi/syscall-symphony/glibc-symphony/glibc-build/config.h \
+ /syscall-symphony/glibc-symphony/glibc-build/config.h \
  ../sysdeps/generic/libc-symver.h ../sysdeps/generic/symbol-hacks.h
 ../include/stdc-predef.h:
-/home/pi/syscall-symphony/glibc-symphony/glibc-build/libc-modules.h:
+/syscall-symphony/glibc-symphony/glibc-build/libc-modules.h:
 ../include/libc-symbols.h:
-/home/pi/syscall-symphony/glibc-symphony/glibc-build/config.h:
+/syscall-symphony/glibc-symphony/glibc-build/config.h:
 ../sysdeps/generic/libc-symver.h:
 ../sysdeps/generic/symbol-hacks.h:

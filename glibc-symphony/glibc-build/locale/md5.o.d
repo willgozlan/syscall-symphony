@@ -1,5 +1,5 @@
-$(common-objpfx)locale/md5.o: \
- ../crypt/md5.c ../include/stdc-predef.h \
+$(common-objpfx)locale/md5.o: ../crypt/md5.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h programs/config.h programs/../../version.h \
  $(common-objpfx)config.h \

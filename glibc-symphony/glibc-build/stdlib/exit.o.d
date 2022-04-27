@@ -1,5 +1,5 @@
-$(common-objpfx)stdlib/exit.o: \
- exit.c ../include/stdc-predef.h \
+$(common-objpfx)stdlib/exit.o: exit.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

@@ -1,5 +1,5 @@
-$(common-objpfx)stdlib/lrand48.os: \
- lrand48.c ../include/stdc-predef.h \
+$(common-objpfx)stdlib/lrand48.os: lrand48.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

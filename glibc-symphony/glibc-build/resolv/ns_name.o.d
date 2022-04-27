@@ -1,5 +1,5 @@
-$(common-objpfx)resolv/ns_name.o: \
- ns_name.c ../include/stdc-predef.h \
+$(common-objpfx)resolv/ns_name.o: ns_name.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

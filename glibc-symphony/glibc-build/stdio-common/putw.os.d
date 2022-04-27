@@ -1,5 +1,5 @@
-$(common-objpfx)stdio-common/putw.os: \
- putw.c ../include/stdc-predef.h \
+$(common-objpfx)stdio-common/putw.os: putw.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

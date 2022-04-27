@@ -1,5 +1,5 @@
-$(common-objpfx)hesiod/hesiod.os: \
- hesiod.c ../include/stdc-predef.h \
+$(common-objpfx)hesiod/hesiod.os: hesiod.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

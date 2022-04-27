@@ -1,26 +1,23 @@
-$(common-objpfx)malloc/malloc.os: \
- malloc.c ../include/stdc-predef.h \
+$(common-objpfx)malloc/malloc.os: malloc.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \
  ../sysdeps/generic/libc-symver.h ../sysdeps/generic/symbol-hacks.h \
- /usr/lib/gcc/arm-linux-gnueabihf/10/include/stddef.h ../include/stdlib.h \
- ../bits/floatn.h ../bits/floatn-common.h ../include/features.h \
- ../include/features-time64.h \
+ ../misc/play_sound_from_wrapper.h ../misc/play_sound.h \
+ ../misc/pid_exists.h ../include/sys/types.h ../posix/sys/types.h \
+ ../include/features.h ../include/features-time64.h \
  ../sysdeps/unix/sysv/linux/features-time64.h \
  ../sysdeps/wordsize-32/bits/wordsize.h \
  ../sysdeps/unix/sysv/linux/arm/bits/timesize.h ../include/sys/cdefs.h \
  ../misc/sys/cdefs.h ../bits/long-double.h ../include/gnu/stubs.h \
- ../stdlib/stdlib.h ../bits/libc-header-start.h \
- ../sysdeps/unix/sysv/linux/bits/waitflags.h ../bits/waitstatus.h \
- ../include/bits/types/locale_t.h ../locale/bits/types/locale_t.h \
- ../include/bits/types/__locale_t.h ../locale/bits/types/__locale_t.h \
- ../include/sys/types.h ../posix/sys/types.h ../include/bits/types.h \
- ../posix/bits/types.h ../bits/typesizes.h ../bits/time64.h \
- ../include/bits/types/clock_t.h ../time/bits/types/clock_t.h \
- ../include/bits/types/clockid_t.h ../time/bits/types/clockid_t.h \
- ../include/bits/types/time_t.h ../time/bits/types/time_t.h \
- ../include/bits/types/timer_t.h ../time/bits/types/timer_t.h \
+ ../include/bits/types.h ../posix/bits/types.h ../bits/typesizes.h \
+ ../bits/time64.h ../include/bits/types/clock_t.h \
+ ../time/bits/types/clock_t.h ../include/bits/types/clockid_t.h \
+ ../time/bits/types/clockid_t.h ../include/bits/types/time_t.h \
+ ../time/bits/types/time_t.h ../include/bits/types/timer_t.h \
+ ../time/bits/types/timer_t.h \
+ /usr/lib/gcc/arm-linux-gnueabihf/10/include/stddef.h \
  ../bits/stdint-intn.h ../include/endian.h ../string/endian.h \
  ../include/bits/endian.h ../string/bits/endian.h \
  ../sysdeps/arm/bits/endianness.h ../bits/byteswap.h \
@@ -37,9 +34,23 @@ $(common-objpfx)malloc/malloc.os: \
  ../sysdeps/nptl/bits/pthreadtypes-arch.h \
  ../include/bits/atomic_wide_counter.h ../bits/atomic_wide_counter.h \
  ../sysdeps/nptl/bits/struct_mutex.h ../sysdeps/nptl/bits/struct_rwlock.h \
- ../include/alloca.h ../stdlib/alloca.h ../include/stackinfo.h \
- ../sysdeps/arm/stackinfo.h ../include/elf.h ../elf/elf.h \
- ../include/stdint.h ../stdlib/stdint.h ../bits/wchar.h \
+ ../include/unistd.h ../posix/unistd.h \
+ ../sysdeps/unix/sysv/linux/bits/posix_opt.h ../bits/environments.h \
+ ../bits/confname.h ../include/bits/getopt_posix.h \
+ ../posix/bits/getopt_posix.h ../include/bits/getopt_core.h \
+ ../posix/bits/getopt_core.h ../include/bits/unistd_ext.h \
+ ../sysdeps/unix/sysv/linux/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h \
+ /usr/lib/gcc/arm-linux-gnueabihf/10/include/stdbool.h \
+ ../sysdeps/unix/sysv/linux/arm/kernel-features.h \
+ ../sysdeps/unix/sysv/linux/kernel-features.h ../include/stdlib.h \
+ ../bits/floatn.h ../bits/floatn-common.h ../stdlib/stdlib.h \
+ ../bits/libc-header-start.h ../sysdeps/unix/sysv/linux/bits/waitflags.h \
+ ../bits/waitstatus.h ../include/bits/types/locale_t.h \
+ ../locale/bits/types/locale_t.h ../include/bits/types/__locale_t.h \
+ ../locale/bits/types/__locale_t.h ../include/alloca.h ../stdlib/alloca.h \
+ ../include/stackinfo.h ../sysdeps/arm/stackinfo.h ../include/elf.h \
+ ../elf/elf.h ../include/stdint.h ../stdlib/stdint.h ../bits/wchar.h \
  ../bits/stdint-uintn.h ../include/libc-pointer-arith.h \
  ../sysdeps/generic/dl-dtprocnum.h ../sysdeps/pthread/allocalim.h \
  ../include/limits.h /usr/lib/gcc/arm-linux-gnueabihf/10/include/limits.h \
@@ -61,16 +72,7 @@ $(common-objpfx)malloc/malloc.os: \
  ../sysdeps/unix/sysv/linux/xstatver.h \
  ../sysdeps/unix/sysv/linux/struct_stat_time64.h \
  ../sysdeps/unix/sysv/linux/bits/struct_stat_time64_helper.h \
- /usr/lib/gcc/arm-linux-gnueabihf/10/include/stdbool.h \
- ../include/rtld-malloc.h ../include/unistd.h ../posix/unistd.h \
- ../sysdeps/unix/sysv/linux/bits/posix_opt.h ../bits/environments.h \
- ../bits/confname.h ../include/bits/getopt_posix.h \
- ../posix/bits/getopt_posix.h ../include/bits/getopt_core.h \
- ../posix/bits/getopt_core.h ../include/bits/unistd_ext.h \
- ../sysdeps/unix/sysv/linux/bits/unistd_ext.h \
- /usr/include/linux/close_range.h \
- ../sysdeps/unix/sysv/linux/arm/kernel-features.h \
- ../sysdeps/unix/sysv/linux/kernel-features.h ../include/atomic.h \
+ ../include/rtld-malloc.h ../include/atomic.h \
  ../sysdeps/unix/sysv/linux/arm/atomic-machine.h \
  ../sysdeps/arm/atomic-machine.h ../sysdeps/generic/_itoa.h \
  ../include/sys/sysinfo.h \
@@ -230,10 +232,11 @@ $(common-objpfx)libc-modules.h:
 $(common-objpfx)config.h:
 ../sysdeps/generic/libc-symver.h:
 ../sysdeps/generic/symbol-hacks.h:
-/usr/lib/gcc/arm-linux-gnueabihf/10/include/stddef.h:
-../include/stdlib.h:
-../bits/floatn.h:
-../bits/floatn-common.h:
+../misc/play_sound_from_wrapper.h:
+../misc/play_sound.h:
+../misc/pid_exists.h:
+../include/sys/types.h:
+../posix/sys/types.h:
 ../include/features.h:
 ../include/features-time64.h:
 ../sysdeps/unix/sysv/linux/features-time64.h:
@@ -243,16 +246,6 @@ $(common-objpfx)config.h:
 ../misc/sys/cdefs.h:
 ../bits/long-double.h:
 ../include/gnu/stubs.h:
-../stdlib/stdlib.h:
-../bits/libc-header-start.h:
-../sysdeps/unix/sysv/linux/bits/waitflags.h:
-../bits/waitstatus.h:
-../include/bits/types/locale_t.h:
-../locale/bits/types/locale_t.h:
-../include/bits/types/__locale_t.h:
-../locale/bits/types/__locale_t.h:
-../include/sys/types.h:
-../posix/sys/types.h:
 ../include/bits/types.h:
 ../posix/bits/types.h:
 ../bits/typesizes.h:
@@ -265,6 +258,7 @@ $(common-objpfx)config.h:
 ../time/bits/types/time_t.h:
 ../include/bits/types/timer_t.h:
 ../time/bits/types/timer_t.h:
+/usr/lib/gcc/arm-linux-gnueabihf/10/include/stddef.h:
 ../bits/stdint-intn.h:
 ../include/endian.h:
 ../string/endian.h:
@@ -292,6 +286,32 @@ $(common-objpfx)config.h:
 ../bits/atomic_wide_counter.h:
 ../sysdeps/nptl/bits/struct_mutex.h:
 ../sysdeps/nptl/bits/struct_rwlock.h:
+../include/unistd.h:
+../posix/unistd.h:
+../sysdeps/unix/sysv/linux/bits/posix_opt.h:
+../bits/environments.h:
+../bits/confname.h:
+../include/bits/getopt_posix.h:
+../posix/bits/getopt_posix.h:
+../include/bits/getopt_core.h:
+../posix/bits/getopt_core.h:
+../include/bits/unistd_ext.h:
+../sysdeps/unix/sysv/linux/bits/unistd_ext.h:
+/usr/include/linux/close_range.h:
+/usr/lib/gcc/arm-linux-gnueabihf/10/include/stdbool.h:
+../sysdeps/unix/sysv/linux/arm/kernel-features.h:
+../sysdeps/unix/sysv/linux/kernel-features.h:
+../include/stdlib.h:
+../bits/floatn.h:
+../bits/floatn-common.h:
+../stdlib/stdlib.h:
+../bits/libc-header-start.h:
+../sysdeps/unix/sysv/linux/bits/waitflags.h:
+../bits/waitstatus.h:
+../include/bits/types/locale_t.h:
+../locale/bits/types/locale_t.h:
+../include/bits/types/__locale_t.h:
+../locale/bits/types/__locale_t.h:
 ../include/alloca.h:
 ../stdlib/alloca.h:
 ../include/stackinfo.h:
@@ -335,22 +355,7 @@ $(common-objpfx)config.h:
 ../sysdeps/unix/sysv/linux/xstatver.h:
 ../sysdeps/unix/sysv/linux/struct_stat_time64.h:
 ../sysdeps/unix/sysv/linux/bits/struct_stat_time64_helper.h:
-/usr/lib/gcc/arm-linux-gnueabihf/10/include/stdbool.h:
 ../include/rtld-malloc.h:
-../include/unistd.h:
-../posix/unistd.h:
-../sysdeps/unix/sysv/linux/bits/posix_opt.h:
-../bits/environments.h:
-../bits/confname.h:
-../include/bits/getopt_posix.h:
-../posix/bits/getopt_posix.h:
-../include/bits/getopt_core.h:
-../posix/bits/getopt_core.h:
-../include/bits/unistd_ext.h:
-../sysdeps/unix/sysv/linux/bits/unistd_ext.h:
-/usr/include/linux/close_range.h:
-../sysdeps/unix/sysv/linux/arm/kernel-features.h:
-../sysdeps/unix/sysv/linux/kernel-features.h:
 ../include/atomic.h:
 ../sysdeps/unix/sysv/linux/arm/atomic-machine.h:
 ../sysdeps/arm/atomic-machine.h:

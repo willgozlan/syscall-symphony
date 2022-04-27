@@ -1,5 +1,5 @@
-$(common-objpfx)misc/mkstemps.o: \
- mkstemps.c ../include/stdc-predef.h \
+$(common-objpfx)misc/mkstemps.o: mkstemps.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

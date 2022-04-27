@@ -1,5 +1,5 @@
-$(common-objpfx)iconv/gconv_dl.o: \
- gconv_dl.c ../include/stdc-predef.h \
+$(common-objpfx)iconv/gconv_dl.o: gconv_dl.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

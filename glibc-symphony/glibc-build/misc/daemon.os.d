@@ -1,5 +1,5 @@
-$(common-objpfx)misc/daemon.os: \
- daemon.c ../include/stdc-predef.h \
+$(common-objpfx)misc/daemon.os: daemon.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

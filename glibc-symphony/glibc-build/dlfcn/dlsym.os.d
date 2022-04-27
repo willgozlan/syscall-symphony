@@ -1,5 +1,5 @@
-$(common-objpfx)dlfcn/dlsym.os: \
- dlsym.c ../include/stdc-predef.h \
+$(common-objpfx)dlfcn/dlsym.os: dlsym.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

@@ -1,5 +1,5 @@
-$(common-objpfx)iconvdata/brf.os: \
- brf.c ../include/stdc-predef.h \
+$(common-objpfx)iconvdata/brf.os: brf.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

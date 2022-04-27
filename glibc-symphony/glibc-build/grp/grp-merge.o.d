@@ -1,5 +1,5 @@
-$(common-objpfx)grp/grp-merge.o: \
- grp-merge.c ../include/stdc-predef.h \
+$(common-objpfx)grp/grp-merge.o: grp-merge.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

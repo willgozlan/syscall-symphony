@@ -1,5 +1,5 @@
-$(common-objpfx)locale/lc-time.os: \
- lc-time.c ../include/stdc-predef.h \
+$(common-objpfx)locale/lc-time.os: lc-time.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h programs/config.h programs/../../version.h \
  $(common-objpfx)config.h \

@@ -1,5 +1,5 @@
-$(common-objpfx)pwd/getpwnam.o: \
- getpwnam.c ../include/stdc-predef.h \
+$(common-objpfx)pwd/getpwnam.o: getpwnam.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

@@ -1,5 +1,5 @@
-$(common-objpfx)libio/feof_u.os: \
- feof_u.c ../include/stdc-predef.h \
+$(common-objpfx)libio/feof_u.os: feof_u.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

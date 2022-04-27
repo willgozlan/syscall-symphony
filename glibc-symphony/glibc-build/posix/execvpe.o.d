@@ -1,5 +1,5 @@
-$(common-objpfx)posix/execvpe.o: \
- execvpe.c ../include/stdc-predef.h \
+$(common-objpfx)posix/execvpe.o: execvpe.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

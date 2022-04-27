@@ -1,5 +1,5 @@
-$(common-objpfx)misc/mntent_r.o: \
- mntent_r.c ../include/stdc-predef.h \
+$(common-objpfx)misc/mntent_r.o: mntent_r.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

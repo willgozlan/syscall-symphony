@@ -1,5 +1,5 @@
-$(common-objpfx)libio/fseeko64.o: \
- fseeko64.c ../include/stdc-predef.h \
+$(common-objpfx)libio/fseeko64.o: fseeko64.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

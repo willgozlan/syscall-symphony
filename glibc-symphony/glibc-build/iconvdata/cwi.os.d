@@ -1,5 +1,5 @@
-$(common-objpfx)iconvdata/cwi.os: \
- cwi.c ../include/stdc-predef.h \
+$(common-objpfx)iconvdata/cwi.os: cwi.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

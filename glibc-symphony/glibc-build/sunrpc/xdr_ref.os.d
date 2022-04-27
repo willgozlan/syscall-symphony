@@ -1,5 +1,5 @@
-$(common-objpfx)sunrpc/xdr_ref.os: \
- xdr_ref.c ../include/stdc-predef.h \
+$(common-objpfx)sunrpc/xdr_ref.os: xdr_ref.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

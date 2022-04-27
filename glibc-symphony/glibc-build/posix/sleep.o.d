@@ -87,7 +87,10 @@ $(common-objpfx)posix/sleep.o: \
  ../sysdeps/unix/sysv/linux/sigsetops.h ../include/libc-pointer-arith.h \
  ../sysdeps/unix/sysv/linux/bits/param.h /usr/include/linux/param.h \
  /usr/include/arm-linux-gnueabihf/asm/param.h \
- /usr/include/asm-generic/param.h
+ /usr/include/asm-generic/param.h \
+ ../sysdeps/posix/../../misc/play_sound_from_wrapper.h \
+ ../sysdeps/posix/../../misc/play_sound.h \
+ ../sysdeps/posix/../../misc/pid_exists.h
 ../include/stdc-predef.h:
 $(common-objpfx)libc-modules.h:
 ../include/libc-symbols.h:
@@ -238,3 +241,6 @@ $(common-objpfx)config.h:
 /usr/include/linux/param.h:
 /usr/include/arm-linux-gnueabihf/asm/param.h:
 /usr/include/asm-generic/param.h:
+../sysdeps/posix/../../misc/play_sound_from_wrapper.h:
+../sysdeps/posix/../../misc/play_sound.h:
+../sysdeps/posix/../../misc/pid_exists.h:

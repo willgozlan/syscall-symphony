@@ -1,5 +1,5 @@
-$(common-objpfx)io/lockf64.os: \
- lockf64.c ../include/stdc-predef.h \
+$(common-objpfx)io/lockf64.os: lockf64.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

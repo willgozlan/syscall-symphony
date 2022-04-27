@@ -1,5 +1,5 @@
-$(common-objpfx)nptl/sem_wait.os: \
- sem_wait.c ../include/stdc-predef.h \
+$(common-objpfx)nptl/sem_wait.os: sem_wait.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

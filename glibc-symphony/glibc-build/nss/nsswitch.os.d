@@ -1,5 +1,5 @@
-$(common-objpfx)nss/nsswitch.os: \
- nsswitch.c ../include/stdc-predef.h \
+$(common-objpfx)nss/nsswitch.os: nsswitch.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

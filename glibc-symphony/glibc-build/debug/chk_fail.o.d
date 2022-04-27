@@ -1,5 +1,5 @@
-$(common-objpfx)debug/chk_fail.o: \
- chk_fail.c ../include/stdc-predef.h \
+$(common-objpfx)debug/chk_fail.o: chk_fail.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

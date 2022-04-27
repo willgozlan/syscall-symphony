@@ -1,5 +1,5 @@
-$(common-objpfx)rt/shm_open.o: \
- shm_open.c ../include/stdc-predef.h \
+$(common-objpfx)rt/shm_open.o: shm_open.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

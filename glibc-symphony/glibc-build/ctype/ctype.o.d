@@ -1,5 +1,5 @@
-$(common-objpfx)ctype/ctype.o: \
- ctype.c ../include/stdc-predef.h \
+$(common-objpfx)ctype/ctype.o: ctype.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

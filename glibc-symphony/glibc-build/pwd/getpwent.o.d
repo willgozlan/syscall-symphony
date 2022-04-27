@@ -1,5 +1,5 @@
-$(common-objpfx)pwd/getpwent.o: \
- getpwent.c ../include/stdc-predef.h \
+$(common-objpfx)pwd/getpwent.o: getpwent.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

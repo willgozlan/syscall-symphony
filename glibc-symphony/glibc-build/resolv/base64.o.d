@@ -1,5 +1,5 @@
-$(common-objpfx)resolv/base64.o: \
- base64.c ../include/stdc-predef.h \
+$(common-objpfx)resolv/base64.o: base64.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

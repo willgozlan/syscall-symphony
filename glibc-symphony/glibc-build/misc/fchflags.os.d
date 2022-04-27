@@ -1,5 +1,5 @@
-$(common-objpfx)misc/fchflags.os: \
- fchflags.c ../include/stdc-predef.h \
+$(common-objpfx)misc/fchflags.os: fchflags.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

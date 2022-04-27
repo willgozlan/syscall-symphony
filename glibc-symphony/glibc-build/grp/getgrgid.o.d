@@ -1,5 +1,5 @@
-$(common-objpfx)grp/getgrgid.o: \
- getgrgid.c ../include/stdc-predef.h \
+$(common-objpfx)grp/getgrgid.o: getgrgid.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

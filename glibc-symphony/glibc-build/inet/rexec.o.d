@@ -1,5 +1,5 @@
-$(common-objpfx)inet/rexec.o: \
- rexec.c ../include/stdc-predef.h \
+$(common-objpfx)inet/rexec.o: rexec.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

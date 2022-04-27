@@ -1,5 +1,5 @@
-$(common-objpfx)timezone/zdump.o: \
- zdump.c ../include/stdc-predef.h \
+$(common-objpfx)timezone/zdump.o: zdump.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)config.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \

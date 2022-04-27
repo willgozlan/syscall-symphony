@@ -1,5 +1,5 @@
-$(common-objpfx)stdlib/strtold.o: \
- strtold.c ../include/stdc-predef.h \
+$(common-objpfx)stdlib/strtold.o: strtold.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

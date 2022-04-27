@@ -1,5 +1,5 @@
-$(common-objpfx)libio/__fpurge.o: \
- __fpurge.c ../include/stdc-predef.h \
+$(common-objpfx)libio/__fpurge.o: __fpurge.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \
@@ -176,8 +176,8 @@ $(common-objpfx)libio/__fpurge.o: \
  ../include/bits/stdio.h ../libio/bits/stdio.h ../libio/libio.h \
  ../include/bits/types/wint_t.h ../wcsmbs/bits/types/wint_t.h \
  ../include/gconv.h ../iconv/gconv.h ../include/shlib-compat.h \
- $(common-objpfx)abi-versions.h \
- libioP.h ../sysdeps/generic/math_ldbl_opt.h iolibio.h \
+ $(common-objpfx)abi-versions.h libioP.h \
+ ../sysdeps/generic/math_ldbl_opt.h iolibio.h \
  ../sysdeps/unix/sysv/linux/_G_config.h ../include/unistd.h \
  ../posix/unistd.h ../sysdeps/unix/sysv/linux/bits/posix_opt.h \
  ../bits/environments.h ../bits/confname.h ../include/bits/getopt_posix.h \

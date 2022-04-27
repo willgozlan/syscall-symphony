@@ -1,5 +1,5 @@
-$(common-objpfx)stdlib/l64a.o: \
- l64a.c ../include/stdc-predef.h \
+$(common-objpfx)stdlib/l64a.o: l64a.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

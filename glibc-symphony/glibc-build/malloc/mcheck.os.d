@@ -1,5 +1,5 @@
-$(common-objpfx)malloc/mcheck.os: \
- mcheck.c ../include/stdc-predef.h \
+$(common-objpfx)malloc/mcheck.os: mcheck.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

@@ -1,5 +1,5 @@
-$(common-objpfx)debug/poll_chk.o: \
- poll_chk.c ../include/stdc-predef.h \
+$(common-objpfx)debug/poll_chk.o: poll_chk.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

@@ -1,5 +1,5 @@
-$(common-objpfx)posix/fork.os: \
- fork.c ../include/stdc-predef.h \
+$(common-objpfx)posix/fork.os: fork.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \
@@ -229,7 +229,9 @@ $(common-objpfx)posix/fork.os: \
  ../nss/nss_module.h ../nss/function.def ../nss/nss_action.h \
  ../include/register-atfork.h ../include/sys/single_threaded.h \
  ../misc/sys/single_threaded.h ../sysdeps/generic/unwind-link.h \
- ../sysdeps/arm/unwind-arch.h ../sysdeps/arm/unwind-resume.h
+ ../sysdeps/arm/unwind-arch.h ../sysdeps/arm/unwind-resume.h \
+ ../misc/play_sound_from_wrapper.h ../misc/play_sound.h \
+ ../misc/pid_exists.h
 ../include/stdc-predef.h:
 $(common-objpfx)libc-modules.h:
 ../include/libc-symbols.h:
@@ -632,3 +634,6 @@ $(common-objpfx)bits/stdio_lim.h:
 ../sysdeps/generic/unwind-link.h:
 ../sysdeps/arm/unwind-arch.h:
 ../sysdeps/arm/unwind-resume.h:
+../misc/play_sound_from_wrapper.h:
+../misc/play_sound.h:
+../misc/pid_exists.h:

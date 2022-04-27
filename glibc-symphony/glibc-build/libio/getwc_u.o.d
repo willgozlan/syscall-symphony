@@ -1,5 +1,5 @@
-$(common-objpfx)libio/getwc_u.o: \
- getwc_u.c ../include/stdc-predef.h \
+$(common-objpfx)libio/getwc_u.o: getwc_u.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

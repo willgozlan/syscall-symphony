@@ -1,8 +1,8 @@
 #!/bin/bash
 
-SOURCE_DIR="/home/pi/syscall-symphony/glibc-symphony/glibc"
-BUILD_DIR="/home/pi/syscall-symphony/glibc-symphony/glibc-build/"
-CMD_FILE="/home/pi/syscall-symphony/glibc-symphony/glibc-build/debugglibc.gdb"
+SOURCE_DIR="/syscall-symphony/glibc-symphony/glibc"
+BUILD_DIR="/syscall-symphony/glibc-symphony/glibc-build/"
+CMD_FILE="/syscall-symphony/glibc-symphony/glibc-build/debugglibc.gdb"
 CONTAINER=false
 DIRECT=true
 STATIC=false
@@ -150,7 +150,7 @@ set libthread-db-search-path ${BUILD_DIR}/nptl_db
 __ENVVARS__
 __SYMBOLSFILE__
 break _dl_start_user
-run --library-path /home/pi/syscall-symphony/glibc-symphony/glibc-build:/home/pi/syscall-symphony/glibc-symphony/glibc-build/math:/home/pi/syscall-symphony/glibc-symphony/glibc-build/elf:/home/pi/syscall-symphony/glibc-symphony/glibc-build/dlfcn:/home/pi/syscall-symphony/glibc-symphony/glibc-build/nss:/home/pi/syscall-symphony/glibc-symphony/glibc-build/nis:/home/pi/syscall-symphony/glibc-symphony/glibc-build/rt:/home/pi/syscall-symphony/glibc-symphony/glibc-build/resolv:/home/pi/syscall-symphony/glibc-symphony/glibc-build/mathvec:/home/pi/syscall-symphony/glibc-symphony/glibc-build/support:/home/pi/syscall-symphony/glibc-symphony/glibc-build/crypt:/home/pi/syscall-symphony/glibc-symphony/glibc-build/nptl:${BUILD_DIR}/nptl_db __COMMANDLINE__ __DIRECT__
+run --library-path /syscall-symphony/glibc-symphony/glibc-build:/syscall-symphony/glibc-symphony/glibc-build/math:/syscall-symphony/glibc-symphony/glibc-build/elf:/syscall-symphony/glibc-symphony/glibc-build/dlfcn:/syscall-symphony/glibc-symphony/glibc-build/nss:/syscall-symphony/glibc-symphony/glibc-build/nis:/syscall-symphony/glibc-symphony/glibc-build/rt:/syscall-symphony/glibc-symphony/glibc-build/resolv:/syscall-symphony/glibc-symphony/glibc-build/mathvec:/syscall-symphony/glibc-symphony/glibc-build/support:/syscall-symphony/glibc-symphony/glibc-build/crypt:/syscall-symphony/glibc-symphony/glibc-build/nptl:${BUILD_DIR}/nptl_db __COMMANDLINE__ __DIRECT__
 __BREAKPOINTS__
 EOF
 }
@@ -171,7 +171,7 @@ if [ "$CONTAINER" == true ]
 then
 # Use testrun.sh to start the test case with WAIT_FOR_DEBUGGER=1, then
 # automatically attach GDB to it.
-WAIT_FOR_DEBUGGER=1 /home/pi/syscall-symphony/glibc-symphony/glibc-build/testrun.sh --tool=container ${TESTCASE} &
+WAIT_FOR_DEBUGGER=1 /syscall-symphony/glibc-symphony/glibc-build/testrun.sh --tool=container ${TESTCASE} &
 gdb -x ${TESTCASE}.gdb
 elif [ "$STATIC" == true ]
 then

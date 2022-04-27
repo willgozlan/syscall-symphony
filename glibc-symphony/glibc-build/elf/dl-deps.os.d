@@ -1,5 +1,5 @@
-$(common-objpfx)elf/dl-deps.os: \
- dl-deps.c ../include/stdc-predef.h \
+$(common-objpfx)elf/dl-deps.os: dl-deps.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \
@@ -193,8 +193,7 @@ $(common-objpfx)elf/dl-deps.os: \
  ../sysdeps/generic/dl-procruntime.c \
  ../sysdeps/unix/sysv/linux/arm/dl-procinfo.c \
  ../sysdeps/unix/sysv/linux/dl-vdso-setup.c ../include/scratch_buffer.h \
- dl-dst.h \
- $(common-objpfx)elf/trusted-dirs.h
+ dl-dst.h $(common-objpfx)elf/trusted-dirs.h
 ../include/stdc-predef.h:
 $(common-objpfx)libc-modules.h:
 ../include/libc-symbols.h:

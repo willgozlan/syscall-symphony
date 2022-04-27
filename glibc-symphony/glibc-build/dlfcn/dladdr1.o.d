@@ -1,5 +1,5 @@
-$(common-objpfx)dlfcn/dladdr1.o: \
- dladdr1.c ../include/stdc-predef.h \
+$(common-objpfx)dlfcn/dladdr1.o: dladdr1.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

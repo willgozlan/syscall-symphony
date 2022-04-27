@@ -5,13 +5,13 @@
 # 1 "<command-line>" 2
 # 1 "./include/libc-symbols.h" 1
 # 85 "./include/libc-symbols.h"
-# 1 "/home/pi/syscall-symphony/glibc-symphony/glibc-build/config.h" 1
+# 1 "/syscall-symphony/glibc-symphony/glibc-build/config.h" 1
 # 86 "./include/libc-symbols.h" 2
 
 
 # 1 "sysdeps/generic/libc-symver.h" 1
 # 25 "sysdeps/generic/libc-symver.h"
-# 1 "/home/pi/syscall-symphony/glibc-symphony/glibc-build/config.h" 1
+# 1 "/syscall-symphony/glibc-symphony/glibc-build/config.h" 1
 # 26 "sysdeps/generic/libc-symver.h" 2
 # 89 "./include/libc-symbols.h" 2
 # 865 "./include/libc-symbols.h"

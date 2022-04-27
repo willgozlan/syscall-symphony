@@ -1,5 +1,5 @@
-$(common-objpfx)libio/ioungetc.o: \
- ioungetc.c ../include/stdc-predef.h \
+$(common-objpfx)libio/ioungetc.o: ioungetc.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

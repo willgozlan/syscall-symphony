@@ -1,5 +1,5 @@
-$(common-objpfx)posix/execle.os: \
- execle.c ../include/stdc-predef.h \
+$(common-objpfx)posix/execle.os: execle.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

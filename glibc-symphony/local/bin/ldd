@@ -24,9 +24,9 @@
 
 # We should be able to find the translation right at the beginning.
 TEXTDOMAIN=libc
-TEXTDOMAINDIR=/home/pi/syscall-symphony/glibc-symphony/local/share/locale
+TEXTDOMAINDIR=/syscall-symphony/glibc-symphony/local/share/locale
 
-RTLDLIST=/home/pi/syscall-symphony/glibc-symphony/local/lib/ld-linux-armhf.so.3
+RTLDLIST=/syscall-symphony/glibc-symphony/local/lib/ld-linux-armhf.so.3
 warn=
 bind_now=
 verbose=

@@ -1,5 +1,5 @@
-$(common-objpfx)posix/fnmatch.os: \
- fnmatch.c ../include/stdc-predef.h \
+$(common-objpfx)posix/fnmatch.os: fnmatch.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

@@ -1,5 +1,5 @@
-$(common-objpfx)math/w_lgamma.os: \
- w_lgamma.c ../include/stdc-predef.h \
+$(common-objpfx)math/w_lgamma.os: w_lgamma.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

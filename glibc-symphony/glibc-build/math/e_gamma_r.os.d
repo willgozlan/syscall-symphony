@@ -205,8 +205,7 @@ $(common-objpfx)math/e_gamma_r.os: \
  ../sysdeps/ieee754/libm-alias-finite.h \
  $(common-objpfx)first-versions.h \
  ../include/shlib-compat.h \
- $(common-objpfx)abi-versions.h \
- mul_split.h
+ $(common-objpfx)abi-versions.h mul_split.h
 ../include/stdc-predef.h:
 $(common-objpfx)libc-modules.h:
 ../include/libc-symbols.h:

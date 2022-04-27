@@ -1,5 +1,5 @@
-$(common-objpfx)elf/dl-usage.os: \
- dl-usage.c ../include/stdc-predef.h \
+$(common-objpfx)elf/dl-usage.os: dl-usage.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

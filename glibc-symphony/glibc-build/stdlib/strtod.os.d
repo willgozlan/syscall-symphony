@@ -1,5 +1,5 @@
-$(common-objpfx)stdlib/strtod.os: \
- strtod.c ../include/stdc-predef.h \
+$(common-objpfx)stdlib/strtod.os: strtod.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

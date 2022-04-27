@@ -1,5 +1,5 @@
-$(common-objpfx)support/xlseek.oS: \
- xlseek.c ../include/stdc-predef.h \
+$(common-objpfx)support/xlseek.oS: xlseek.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

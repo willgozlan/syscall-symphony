@@ -1,5 +1,5 @@
-$(common-objpfx)string/memccpy.os: \
- memccpy.c ../include/stdc-predef.h \
+$(common-objpfx)string/memccpy.os: memccpy.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

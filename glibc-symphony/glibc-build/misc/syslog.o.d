@@ -1,5 +1,5 @@
-$(common-objpfx)misc/syslog.o: \
- syslog.c ../include/stdc-predef.h \
+$(common-objpfx)misc/syslog.o: syslog.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

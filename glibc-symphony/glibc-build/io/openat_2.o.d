@@ -1,5 +1,5 @@
-$(common-objpfx)io/openat_2.o: \
- openat_2.c ../include/stdc-predef.h \
+$(common-objpfx)io/openat_2.o: openat_2.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

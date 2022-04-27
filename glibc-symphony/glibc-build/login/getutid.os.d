@@ -1,5 +1,5 @@
-$(common-objpfx)login/getutid.os: \
- getutid.c ../include/stdc-predef.h \
+$(common-objpfx)login/getutid.os: getutid.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

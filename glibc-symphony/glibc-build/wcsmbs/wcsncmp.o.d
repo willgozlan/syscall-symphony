@@ -1,5 +1,5 @@
-$(common-objpfx)wcsmbs/wcsncmp.o: \
- wcsncmp.c ../include/stdc-predef.h \
+$(common-objpfx)wcsmbs/wcsncmp.o: wcsncmp.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

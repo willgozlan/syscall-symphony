@@ -1,5 +1,5 @@
-$(common-objpfx)pwd/getpwuid.o: \
- getpwuid.c ../include/stdc-predef.h \
+$(common-objpfx)pwd/getpwuid.o: getpwuid.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

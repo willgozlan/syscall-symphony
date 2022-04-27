@@ -1,5 +1,5 @@
-$(common-objpfx)wcsmbs/wmemcpy.os: \
- wmemcpy.c ../include/stdc-predef.h \
+$(common-objpfx)wcsmbs/wmemcpy.os: wmemcpy.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

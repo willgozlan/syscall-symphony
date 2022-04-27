@@ -1,5 +1,5 @@
-$(common-objpfx)iconvdata/gbk.os: \
- gbk.c ../include/stdc-predef.h \
+$(common-objpfx)iconvdata/gbk.os: gbk.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

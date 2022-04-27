@@ -1,5 +1,5 @@
-$(common-objpfx)crypt/sha512.o: \
- sha512.c ../include/stdc-predef.h \
+$(common-objpfx)crypt/sha512.o: sha512.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

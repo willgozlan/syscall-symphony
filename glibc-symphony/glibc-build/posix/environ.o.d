@@ -1,5 +1,5 @@
-$(common-objpfx)posix/environ.o: \
- environ.c ../include/stdc-predef.h \
+$(common-objpfx)posix/environ.o: environ.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

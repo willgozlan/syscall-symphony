@@ -1,5 +1,5 @@
-$(common-objpfx)iconvdata/t.61.os: \
- t.61.c ../include/stdc-predef.h \
+$(common-objpfx)iconvdata/t.61.os: t.61.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

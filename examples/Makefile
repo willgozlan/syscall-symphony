@@ -1,4 +1,4 @@
-testglibc = /home/pi/syscall-symphony/glibc-symphony/local
+testglibc = /syscall-symphony/glibc-symphony/local
 
 gcc = gcc 
 

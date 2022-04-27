@@ -1,5 +1,5 @@
-$(common-objpfx)nptl_db/td_log.os: \
- td_log.c ../include/stdc-predef.h \
+$(common-objpfx)nptl_db/td_log.os: td_log.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

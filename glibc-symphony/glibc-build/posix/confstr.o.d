@@ -1,5 +1,5 @@
-$(common-objpfx)posix/confstr.o: \
- confstr.c ../include/stdc-predef.h \
+$(common-objpfx)posix/confstr.o: confstr.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

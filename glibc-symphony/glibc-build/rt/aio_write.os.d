@@ -1,5 +1,5 @@
-$(common-objpfx)rt/aio_write.os: \
- aio_write.c ../include/stdc-predef.h \
+$(common-objpfx)rt/aio_write.os: aio_write.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

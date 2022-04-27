@@ -1,5 +1,5 @@
-$(common-objpfx)dlfcn/dlclose.os: \
- dlclose.c ../include/stdc-predef.h \
+$(common-objpfx)dlfcn/dlclose.os: dlclose.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

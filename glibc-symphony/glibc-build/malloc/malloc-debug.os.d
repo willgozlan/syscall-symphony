@@ -205,7 +205,9 @@ $(common-objpfx)malloc/malloc-debug.os: \
  ../sysdeps/arm/dl-lookupcfg.h ../sysdeps/generic/dl-lookupcfg.h \
  ../sysdeps/generic/link_map.h ../sysdeps/generic/dl-relocate-ld.h \
  ../include/inttypes.h ../stdlib/inttypes.h ../include/libc-internal.h \
- ../include/dso_handle.h malloc-check.c malloc.c ../include/sys/sysinfo.h \
+ ../include/dso_handle.h malloc-check.c malloc.c \
+ ../misc/play_sound_from_wrapper.h ../misc/play_sound.h \
+ ../misc/pid_exists.h ../include/sys/sysinfo.h \
  ../sysdeps/unix/sysv/linux/include/sys/sysinfo.h \
  ../sysdeps/unix/sysv/linux/sys/sysinfo.h /usr/include/linux/kernel.h \
  /usr/include/linux/sysinfo.h /usr/include/linux/const.h \
@@ -587,6 +589,9 @@ mtrace-impl.c:
 ../include/dso_handle.h:
 malloc-check.c:
 malloc.c:
+../misc/play_sound_from_wrapper.h:
+../misc/play_sound.h:
+../misc/pid_exists.h:
 ../include/sys/sysinfo.h:
 ../sysdeps/unix/sysv/linux/include/sys/sysinfo.h:
 ../sysdeps/unix/sysv/linux/sys/sysinfo.h:

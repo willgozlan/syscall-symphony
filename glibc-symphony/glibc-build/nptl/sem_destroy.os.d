@@ -34,8 +34,8 @@ $(common-objpfx)nptl/sem_destroy.os: \
  ../include/bits/atomic_wide_counter.h ../bits/atomic_wide_counter.h \
  ../sysdeps/nptl/bits/struct_mutex.h ../sysdeps/nptl/bits/struct_rwlock.h \
  ../sysdeps/unix/sysv/linux/bits/semaphore.h ../include/shlib-compat.h \
- $(common-objpfx)abi-versions.h \
- semaphoreP.h ../sysdeps/nptl/futex-internal.h ../include/sys/time.h \
+ $(common-objpfx)abi-versions.h semaphoreP.h \
+ ../sysdeps/nptl/futex-internal.h ../include/sys/time.h \
  ../time/sys/time.h ../include/stdio.h ../bits/floatn.h \
  ../bits/floatn-common.h ../libio/stdio.h ../bits/libc-header-start.h \
  /usr/lib/gcc/arm-linux-gnueabihf/10/include/stdarg.h \

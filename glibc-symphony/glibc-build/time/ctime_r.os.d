@@ -1,5 +1,5 @@
-$(common-objpfx)time/ctime_r.os: \
- ctime_r.c ../include/stdc-predef.h \
+$(common-objpfx)time/ctime_r.os: ctime_r.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

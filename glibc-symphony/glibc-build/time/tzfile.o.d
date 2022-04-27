@@ -1,5 +1,5 @@
-$(common-objpfx)time/tzfile.o: \
- tzfile.c ../include/stdc-predef.h \
+$(common-objpfx)time/tzfile.o: tzfile.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

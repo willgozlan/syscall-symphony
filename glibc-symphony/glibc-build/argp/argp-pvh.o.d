@@ -1,5 +1,5 @@
-$(common-objpfx)argp/argp-pvh.o: \
- argp-pvh.c ../include/stdc-predef.h \
+$(common-objpfx)argp/argp-pvh.o: argp-pvh.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

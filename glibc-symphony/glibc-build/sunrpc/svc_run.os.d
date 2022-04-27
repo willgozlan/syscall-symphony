@@ -1,5 +1,5 @@
-$(common-objpfx)sunrpc/svc_run.os: \
- svc_run.c ../include/stdc-predef.h \
+$(common-objpfx)sunrpc/svc_run.os: svc_run.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

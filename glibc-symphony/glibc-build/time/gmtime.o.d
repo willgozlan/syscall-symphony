@@ -1,5 +1,5 @@
-$(common-objpfx)time/gmtime.o: \
- gmtime.c ../include/stdc-predef.h \
+$(common-objpfx)time/gmtime.o: gmtime.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

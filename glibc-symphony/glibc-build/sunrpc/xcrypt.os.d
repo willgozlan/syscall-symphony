@@ -1,5 +1,5 @@
-$(common-objpfx)sunrpc/xcrypt.os: \
- xcrypt.c ../include/stdc-predef.h \
+$(common-objpfx)sunrpc/xcrypt.os: xcrypt.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

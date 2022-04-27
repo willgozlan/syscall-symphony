@@ -1,5 +1,5 @@
-$(common-objpfx)string/strxfrm.o: \
- strxfrm.c ../include/stdc-predef.h \
+$(common-objpfx)string/strxfrm.o: strxfrm.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

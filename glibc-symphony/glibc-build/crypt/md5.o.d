@@ -80,8 +80,7 @@ $(common-objpfx)crypt/md5.o: md5.c \
  ../include/bits/stdio.h ../libio/bits/stdio.h ../libio/libio.h \
  ../include/bits/types/wint_t.h ../wcsmbs/bits/types/wint_t.h \
  ../include/gconv.h ../iconv/gconv.h ../include/shlib-compat.h \
- $(common-objpfx)abi-versions.h \
- md5-block.c
+ $(common-objpfx)abi-versions.h md5-block.c
 ../include/stdc-predef.h:
 $(common-objpfx)libc-modules.h:
 ../include/libc-symbols.h:

@@ -1,5 +1,5 @@
-$(common-objpfx)login/openpty.o: \
- openpty.c ../include/stdc-predef.h \
+$(common-objpfx)login/openpty.o: openpty.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

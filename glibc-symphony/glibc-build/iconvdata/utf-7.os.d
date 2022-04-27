@@ -1,5 +1,5 @@
-$(common-objpfx)iconvdata/utf-7.os: \
- utf-7.c ../include/stdc-predef.h \
+$(common-objpfx)iconvdata/utf-7.os: utf-7.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

@@ -1,5 +1,5 @@
-$(common-objpfx)timezone/zic.o: \
- zic.c ../include/stdc-predef.h \
+$(common-objpfx)timezone/zic.o: zic.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)config.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \

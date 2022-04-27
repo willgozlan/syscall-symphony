@@ -1,5 +1,5 @@
-$(common-objpfx)inet/deadline.os: \
- deadline.c ../include/stdc-predef.h \
+$(common-objpfx)inet/deadline.os: deadline.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

@@ -1,5 +1,5 @@
-$(common-objpfx)support/xpipe.oS: \
- xpipe.c ../include/stdc-predef.h \
+$(common-objpfx)support/xpipe.oS: xpipe.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

@@ -208,8 +208,7 @@ $(common-objpfx)elf/rtld.os: rtld.c \
  ../sysdeps/generic/dl-prop.h ../sysdeps/unix/sysv/linux/dl-vdso.h \
  ../sysdeps/generic/dl-hash.h ../sysdeps/unix/sysv/linux/dl-vdso-setup.h \
  ../include/stap-probe.h ../include/array_length.h libc-early-init.h \
- dl-main.h \
- $(common-objpfx)gnu/lib-names.h \
+ dl-main.h $(common-objpfx)gnu/lib-names.h \
  $(common-objpfx)gnu/lib-names-hard.h \
  dl-tunables.h \
  $(common-objpfx)dl-tunable-list.h \

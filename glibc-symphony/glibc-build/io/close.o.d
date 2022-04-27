@@ -169,7 +169,10 @@ $(common-objpfx)io/close.o: \
  ../sysdeps/unix/sysv/linux/not-cancel.h ../include/fcntl.h ../io/fcntl.h \
  ../sysdeps/unix/sysv/linux/arm/bits/fcntl.h \
  ../sysdeps/unix/sysv/linux/bits/fcntl-linux.h \
- /usr/include/linux/falloc.h ../include/sys/wait.h ../posix/sys/wait.h
+ /usr/include/linux/falloc.h ../include/sys/wait.h ../posix/sys/wait.h \
+ ../sysdeps/unix/sysv/linux/../../../../misc/play_sound_from_wrapper.h \
+ ../sysdeps/unix/sysv/linux/../../../../misc/play_sound.h \
+ ../sysdeps/unix/sysv/linux/../../../../misc/pid_exists.h
 ../include/stdc-predef.h:
 $(common-objpfx)libc-modules.h:
 ../include/libc-symbols.h:
@@ -458,3 +461,6 @@ $(common-objpfx)config.h:
 /usr/include/linux/falloc.h:
 ../include/sys/wait.h:
 ../posix/sys/wait.h:
+../sysdeps/unix/sysv/linux/../../../../misc/play_sound_from_wrapper.h:
+../sysdeps/unix/sysv/linux/../../../../misc/play_sound.h:
+../sysdeps/unix/sysv/linux/../../../../misc/pid_exists.h:

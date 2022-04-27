@@ -1,5 +1,5 @@
-$(common-objpfx)nss/nss_hash.os: \
- nss_hash.c ../include/stdc-predef.h \
+$(common-objpfx)nss/nss_hash.os: nss_hash.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

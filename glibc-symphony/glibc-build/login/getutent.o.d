@@ -1,5 +1,5 @@
-$(common-objpfx)login/getutent.o: \
- getutent.c ../include/stdc-predef.h \
+$(common-objpfx)login/getutent.o: getutent.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

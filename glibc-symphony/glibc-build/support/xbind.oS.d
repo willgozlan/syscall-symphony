@@ -1,5 +1,5 @@
-$(common-objpfx)support/xbind.oS: \
- xbind.c ../include/stdc-predef.h \
+$(common-objpfx)support/xbind.oS: xbind.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

@@ -1,5 +1,5 @@
-$(common-objpfx)stdlib/seed48.os: \
- seed48.c ../include/stdc-predef.h \
+$(common-objpfx)stdlib/seed48.os: seed48.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

@@ -1,5 +1,5 @@
-$(common-objpfx)inet/herrno.o: \
- herrno.c ../include/stdc-predef.h \
+$(common-objpfx)inet/herrno.o: herrno.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

@@ -1,5 +1,5 @@
-$(common-objpfx)nis/nis_add.os: \
- nis_add.c ../include/stdc-predef.h \
+$(common-objpfx)nis/nis_add.os: nis_add.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \

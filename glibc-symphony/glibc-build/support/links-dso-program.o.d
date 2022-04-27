@@ -103,15 +103,15 @@ $(common-objpfx)support/links-dso-program.o: \
  /usr/include/c++/10/bits/alloc_traits.h \
  /usr/include/c++/10/bits/stl_construct.h \
  /usr/include/c++/10/ext/string_conversions.h \
- $(common-objpfx)cstdlib \
- ../include/stdlib.h ../stdlib/stdlib.h \
- ../sysdeps/unix/sysv/linux/bits/waitflags.h ../bits/waitstatus.h \
- ../include/sys/types.h ../posix/sys/types.h ../include/endian.h \
- ../string/endian.h ../bits/byteswap.h ../bits/uintn-identity.h \
- ../include/sys/select.h ../misc/sys/select.h ../bits/select.h \
- ../include/bits/types/sigset_t.h ../signal/bits/types/sigset_t.h \
- ../include/alloca.h ../stdlib/alloca.h ../bits/stdlib-bsearch.h \
- ../include/bits/stdlib-float.h ../stdlib/bits/stdlib-float.h \
+ $(common-objpfx)cstdlib ../include/stdlib.h \
+ ../stdlib/stdlib.h ../sysdeps/unix/sysv/linux/bits/waitflags.h \
+ ../bits/waitstatus.h ../include/sys/types.h ../posix/sys/types.h \
+ ../include/endian.h ../string/endian.h ../bits/byteswap.h \
+ ../bits/uintn-identity.h ../include/sys/select.h ../misc/sys/select.h \
+ ../bits/select.h ../include/bits/types/sigset_t.h \
+ ../signal/bits/types/sigset_t.h ../include/alloca.h ../stdlib/alloca.h \
+ ../bits/stdlib-bsearch.h ../include/bits/stdlib-float.h \
+ ../stdlib/bits/stdlib-float.h \
  $(common-objpfx)bits/std_abs.h \
  /usr/include/c++/10/cstdio ../include/stdio.h ../libio/stdio.h \
  ../include/bits/types/__fpos_t.h ../libio/bits/types/__fpos_t.h \

@@ -6,7 +6,7 @@ release = development
 
 # Installation prefixes.
 install_root = $(DESTDIR)
-prefix = /home/pi/syscall-symphony/glibc-symphony/local
+prefix = /syscall-symphony/glibc-symphony/local
 exec_prefix = ${prefix}
 datadir = ${datarootdir}
 libdir = ${exec_prefix}/lib

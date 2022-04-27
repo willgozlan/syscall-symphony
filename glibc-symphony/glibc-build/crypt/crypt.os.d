@@ -1,5 +1,5 @@
-$(common-objpfx)crypt/crypt.os: \
- crypt.c ../include/stdc-predef.h \
+$(common-objpfx)crypt/crypt.os: crypt.c \
+ ../include/stdc-predef.h \
  $(common-objpfx)libc-modules.h \
  ../include/libc-symbols.h \
  $(common-objpfx)config.h \
