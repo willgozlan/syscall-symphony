@@ -16,14 +16,14 @@
 #define WAITID_ERROR -6
 
 // FILEPATH MACROS
-#define READ_FILE "/home/pi/syscall-symphony/sounds/read.wav"
-#define WRITE_FILE "/home/pi/syscall-symphony/sounds/write.wav"
-#define OPEN_FILE "/home/pi/syscall-symphony/sounds/open.wav"
-#define CLOSE_FILE "/home/pi/syscall-symphony/sounds/close.wav"
-#define MALLOC_FILE "/home/pi/syscall-symphony/sounds/malloc.wav"
-#define FREE_FILE "/home/pi/syscall-symphony/sounds/free.wav"
-#define FORK_FILE "/home/pi/syscall-symphony/sounds/fork.wav"
-#define SLEEP_FILE "/home/pi/syscall-symphony/sounds/sleep.wav"
+#define READ_FILE "/syscall-symphony/sounds/read.wav"
+#define WRITE_FILE "/syscall-symphony/sounds/write.wav"
+#define OPEN_FILE "/syscall-symphony/sounds/open.wav"
+#define CLOSE_FILE "/syscall-symphony/sounds/close.wav"
+#define MALLOC_FILE "/syscall-symphony/sounds/malloc.wav"
+#define FREE_FILE "/syscall-symphony/sounds/free.wav"
+#define FORK_FILE "/syscall-symphony/sounds/fork.wav"
+#define SLEEP_FILE "/syscall-symphony/sounds/sleep.wav"
 
 // Other Constants
 #define CHILD 0
@@ -34,7 +34,7 @@ int play_sound(int sound) {
     siginfo_t siginfo;
 
     if ((pid = syscall(__NR_fork)) < SUCCESS) {
-        perror("fork");
+        perror("syscall");
         return FORK_ERROR;
     }
     else if (pid == CHILD) {
@@ -43,7 +43,7 @@ int play_sound(int sound) {
             case READ: {
                 const char * argv[] = {"/usr/bin/aplay", READ_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("execve");
+                    perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
@@ -51,7 +51,7 @@ int play_sound(int sound) {
             case WRITE: {
                 const char * argv[] = {"/usr/bin/aplay", WRITE_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("execve");
+                    perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
@@ -59,7 +59,7 @@ int play_sound(int sound) {
             case OPEN: {
                 const char * argv[] = {"/usr/bin/aplay", OPEN_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("execve");
+                    perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
@@ -67,7 +67,7 @@ int play_sound(int sound) {
             case CLOSE: {
                 const char * argv[] = {"/usr/bin/aplay", CLOSE_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("execve");
+                    perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
@@ -75,7 +75,7 @@ int play_sound(int sound) {
             case MALLOC: {
                 const char * argv[] = {"/usr/bin/aplay", MALLOC_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("execve");
+                    perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
@@ -83,7 +83,7 @@ int play_sound(int sound) {
             case FREE: {
                 const char * argv[] = {"/usr/bin/aplay", FREE_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("execve");
+                    perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
@@ -91,7 +91,7 @@ int play_sound(int sound) {
             case FORK: {
                 const char * argv[] = {"/usr/bin/aplay", FORK_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("execve");
+                    perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
@@ -99,7 +99,7 @@ int play_sound(int sound) {
             case SLEEP: {
                 const char * argv[] = {"/usr/bin/aplay", SLEEP_FILE, NULL};
                 if (syscall(__NR_execve, "/usr/bin/aplay", argv, NULL) < SUCCESS) {
-                    perror("execve");
+                    perror("syscall");
                     return EXEC_ERROR;
                 }
                 break;
@@ -119,8 +119,8 @@ int play_sound(int sound) {
     }
     else {
         /* parent */
-        if (syscall(__NR_waitid, P_PID, pid, &siginfo, WEXITED) < SUCCESS) {
-            perror("waitid");
+        if (syscall(__NR_waitid, P_PID, pid, &siginfo, WEXITED, NULL) < SUCCESS) {
+            perror("syscall");
             return WAITID_ERROR;
         }
         return SUCCESS;

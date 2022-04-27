@@ -7,18 +7,18 @@ int main(){
 	printf("PID: %d\n", getpid());
 	getc(stdin);
 
-	/*int fd = open("foo", O_CREAT, 0);
+/*	int fd = open("foo", O_CREAT, 0);
 	if(fd == -1)
 	{
 		perror("open");
 		return 1;
 	}*/
 
-	sleep(1);
-/*	if(close(fd) < 0)
+// 	sleep(1);
+	if(close(123) < 0)
 	{
 		perror("close");
 		return 1;
-	}*/
+	}
 	return 0;
 }

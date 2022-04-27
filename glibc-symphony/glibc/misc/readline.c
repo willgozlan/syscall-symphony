@@ -5,21 +5,25 @@
 
 #include "readline.h"
 
-//#include <stdio.h>
-#include <fcntl.h>
 #include <unistd.h>
 #include <sys/syscall.h>
 #include <errno.h>
 #include <stdio.h>
+#include <sys/file.h>
+
+
 
 #define BUF_SIZE 10
 
+#define SUCCESS 1
+#define FLOCK_ERROR 1
 
 #define SYSCALL_FAIL -1
 #define FILE_NO_EXIST -1
 #define BAD_READ -2
 #define END_OF_FILE -3
 #define BAD_CLOSE -4
+
 
 
 int readline (char *buf, int sz, const char *fn, off_t *offset)
@@ -30,6 +34,12 @@ int readline (char *buf, int sz, const char *fn, off_t *offset)
     {
 	perror("open");
         return FILE_NO_EXIST;
+    }
+
+    // acquire lock
+    if (syscall(__NR_flock, fd, LOCK_EX) < SUCCESS) { //flock(fd, LOCK_EX) < SUCCESS) {
+      perror("flock (acquire)");
+      return FLOCK_ERROR;
     }
 
     int nchr = 0;
@@ -44,11 +54,21 @@ int readline (char *buf, int sz, const char *fn, off_t *offset)
 
     // Read/Lseek error
     if(nchr == SYSCALL_FAIL) 
-    {  
+    {
+        // release lock
+        if (syscall(__NR_flock, fd, LOCK_UN) < SUCCESS){             // flock(fd, LOCK_UN) < SUCCESS) {
+          perror("flock (release)");
+          return FLOCK_ERROR;
+        }  
 	perror("lseek/read"); 
         return BAD_READ;
     }
 
+    // release lock
+    if (syscall(__NR_flock, fd, LOCK_UN) < SUCCESS){  //flock(fd, LOCK_UN) < SUCCESS) {
+      perror("flock (release)");
+      return FLOCK_ERROR;
+    }
     // Close file, checking for error
     if(syscall(__NR_close, fd) == SYSCALL_FAIL) 
     {
