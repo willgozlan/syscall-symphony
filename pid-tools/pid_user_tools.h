@@ -9,10 +9,6 @@
 #include <sys/syscall.h>
 #include <string.h>
 #include <sys/file.h>
-<<<<<<< HEAD
-#include <fcntl.h>
-=======
->>>>>>> link-with-glibc/misc
 
 #define MAX_PID_LENGTH 10
 

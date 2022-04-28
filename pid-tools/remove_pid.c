@@ -26,11 +26,7 @@ int remove_pid(char* pid) {
       }
 
       // acquire lock
-<<<<<<< HEAD
-      if (flock(fd, LOCK_EX) < 0) {
-=======
       if (flock(fd, LOCK_EX) < SUCCESS) {
->>>>>>> link-with-glibc/misc
         perror("flock (acquire)");
         return FLOCK_ERROR;
       }
@@ -56,11 +52,7 @@ int remove_pid(char* pid) {
         if (strcmp(buf, pid) != SUCCESS) {
           if (fputs(buf, temp) == EOF) {
             // release lock
-<<<<<<< HEAD
-            if (flock(fd, LOCK_UN) == -1) {
-=======
             if (flock(fd, LOCK_UN) < SUCCESS) {
->>>>>>> link-with-glibc/misc
               perror("flock_release");
               return FLOCK_ERROR;
             }
@@ -69,11 +61,7 @@ int remove_pid(char* pid) {
           }
           if (fputc('\n', temp) == EOF) {
             // release lock
-<<<<<<< HEAD
-            if (flock(fd, LOCK_UN) == -1) {
-=======
             if (flock(fd, LOCK_UN) < SUCCESS) {
->>>>>>> link-with-glibc/misc
               perror("flock_release");
               return FLOCK_ERROR;
             }
@@ -87,11 +75,7 @@ int remove_pid(char* pid) {
           
         if(fflush(temp)) {
           // release lock
-<<<<<<< HEAD
-          if (flock(fd, LOCK_UN) == -1) {
-=======
           if (flock(fd, LOCK_UN) < SUCCESS) {
->>>>>>> link-with-glibc/misc
             perror("flock_release");
             return FLOCK_ERROR;
           }
@@ -103,11 +87,7 @@ int remove_pid(char* pid) {
       if (existence == 0) {
         if (printf("WARNING: %s%s", pid, " was not in .pids - no change made\n") < SUCCESS) {
           // release lock
-<<<<<<< HEAD
-          if (flock(fd, LOCK_UN) == -1) {
-=======
           if (flock(fd, LOCK_UN) < SUCCESS) {
->>>>>>> link-with-glibc/misc
             perror("flock_release");
             return FLOCK_ERROR;
           }
@@ -117,19 +97,11 @@ int remove_pid(char* pid) {
       }
         
       lseek(fileno(temp), 0, SEEK_SET);
-<<<<<<< HEAD
-      pidfile = freopen(".pids", "w", pidfile);
-      while ((read = getline(&buf, &bufsize, temp)) > SUCCESS) {
-        if (fputs(buf, pidfile) == EOF) {
-          // release lock
-          if (flock(fd, LOCK_UN) == -1) {
-=======
       pidfile = freopen("/syscall-symphony/pid-tools/.pids", "w", pidfile);
       while ((read = getline(&buf, &bufsize, temp)) > SUCCESS) {
         if (fputs(buf, pidfile) == EOF) {
           // release lock
           if (flock(fd, LOCK_UN) < SUCCESS) {
->>>>>>> link-with-glibc/misc
             perror("flock_release");
             return FLOCK_ERROR;
           }
@@ -138,11 +110,7 @@ int remove_pid(char* pid) {
         }
       }
 
-<<<<<<< HEAD
-      if (flock(fd, LOCK_UN) < 0) {
-=======
       if (flock(fd, LOCK_UN) < SUCCESS) {
->>>>>>> link-with-glibc/misc
         perror("flock_release");
         return FLOCK_ERROR;
       }
