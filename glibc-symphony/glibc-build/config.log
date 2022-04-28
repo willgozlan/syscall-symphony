@@ -395,7 +395,7 @@ configure:6349: checking for -mtls-dialect=gnu2
 configure:6363: gcc -g -O2 -fno-unwind-tables  -fPIC -mtls-dialect=gnu2 -nostdlib -nostartfiles
 		   conftest.c -o conftest 1>&5
 /usr/bin/ld: warning: cannot find entry symbol _start; defaulting to 000100f8
-/usr/bin/ld: /tmp/ccwDvMOc.o: in function `foo':
+/usr/bin/ld: /tmp/ccc6UF1g.o: in function `foo':
 /syscall-symphony/glibc-symphony/glibc-build/conftest.c:4: undefined reference to `__aeabi_read_tp'
 collect2: error: ld returned 1 exit status
 configure:6366: $? = 1
