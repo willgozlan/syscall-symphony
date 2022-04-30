@@ -27,6 +27,8 @@ This is the full version of the final version of our final project for CSE522S, 
   - `pid-tools/`: This contains source files for the `add_pid` and `remove_pid` programs, along with a Makefile to build them. Additional files are dependencies to build these 2 programs. 
   - `sounds/`: The wav files for the specific syscalls reside here. 
 
+Gain a sudo terminal through `sudo su`. Therefore, the following commands execute with root privileges. 
+
 Navigate into the `/syscall-symphony/glibc-symphony/glibc-build` directory and run the following, where `PATH` is the _absolute_ path to `syscall-symphony/glibc-symphony/local`. 
 
 `../glibc/configure --prefix=PATH` 
