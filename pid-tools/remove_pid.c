@@ -134,7 +134,7 @@ int remove_pid(char* pid) {
 
 int main (int argc, char *argv[]) {
   if (argc != EXPECTED_NUM_ARGS) {
-    if (printf("Usage: %s <PID>", argv[PROGRAM_NAME]) < SUCCESS) {
+    if (printf("Usage: %s <PID>\n", argv[PROGRAM_NAME]) < SUCCESS) {
       perror("printf");
       return PRINTF_ERROR;
     }
