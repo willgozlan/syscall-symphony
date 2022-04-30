@@ -4,7 +4,7 @@ gcc = gcc
 
 .PHONY: all
 
-all: open close read write malloc free fork sleep
+all: open close read write malloc free fork sleep big_example parallel_dense_mm
 
 
 open: open.o
@@ -82,6 +82,24 @@ sleep: sleep.o
 sleep.o: sleep.c
 	$(gcc) -c -g -O0 -I$(testglibc)/include $< -o $@
 
+big_example: big_example.o
+	$(gcc) -Wl,--dynamic-linker=$(testglibc)/lib/ld-linux-armhf.so.3 \
+	-B$(testglibc)/lib/ \
+	-Wl,-rpath=$(testglibc)/lib \
+	$< -o $@
+
+big_example.o: big_example.c
+	$(gcc) -c -g -o0 -I$(testglibc)/include $< -o $@
+
+parallel_dense_mm: parallel_dense_mm.o
+	$(gcc) -Wl,--dynamic-linker=$(testglibc)/lib/ld-linux-armhf.so.3 \
+	-B$(testglibc)/lib/ \
+	-Wl,-rpath=$(testglibc)/lib \
+	$< -o $@
+
+parallel_dense_mm.o: parallel_dense_mm.c
+	$(gcc) -c -g -o0 -I$(testglibc)/include $< -o $@
+
 
 clean:
-	rm -f open open.o close close.o read read.o write write.o malloc malloc.o free free.o fork fork.o sleep sleep.o
+	rm -f open open.o close close.o read read.o write write.o malloc malloc.o free free.o fork fork.o sleep sleep.o big_example big_example.o parallel_dense_mm parallel_dense_mm.o 
