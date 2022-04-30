@@ -17,7 +17,7 @@ This is the full version of the final version of our final project for CSE522S, 
   - Ensure you have the `aplay` utility to play wav files from command line. Check in `/usr/bin/aplay`. If you don't have it, you can install it with `sudo apt-get install alsa-utils`
   - Right now, assumptions are made that the repo is cloned into the root directory, as this allows many users to link with glibc-symphony. See report for more details. 
  
-3.) The project directory `syscall-symphony/`contains 3 sub-directories as follows:
+3.) The project directory `syscall-symphony/`contains 5 sub-directories as follows:
   - `examples/`: This contains an example program to test our modifications to glibc, as well as a Makefile to build and link against our version of glibc. 
   - `finding_syscalls/`: This contains example programs that call a simple system call, then return. The included Makefile links against normal glibc. We used this along with `gdb` to find where specific system calls are implemented. See project report for more details. 
   - `glibc-symphony/`: This is the main directory for our modifed glibc version to make changes to the glibc source code as well as build and run it. There are 3 directories, as follows:
