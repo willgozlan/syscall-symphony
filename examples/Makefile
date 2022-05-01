@@ -4,7 +4,7 @@ gcc = gcc
 
 .PHONY: all
 
-all: open close read write malloc free fork sleep big_example parallel_dense_mm
+all: open close read write malloc free fork sleep big_example parallel_dense_mm random_access
 
 
 open: open.o
@@ -100,6 +100,14 @@ parallel_dense_mm: parallel_dense_mm.o
 parallel_dense_mm.o: parallel_dense_mm.c
 	$(gcc) -c -g -o0 -I$(testglibc)/include $< -o $@
 
+random_access: random_access.o
+	$(gcc) -Wl,--dynamic-linker=$(testglibc)/lib/ld-linux-armhf.so.3 \
+	-B$(testglibc)/lib/ \
+	-Wl,-rpath=$(testglibc)/lib \
+	$< -o $@
+
+random_access.o: random_access.c
+	$(gcc) -c -g -o0 -I$(testglibc)/include $< -o $@
 
 clean:
-	rm -f open open.o close close.o read read.o write write.o malloc malloc.o free free.o fork fork.o sleep sleep.o big_example big_example.o parallel_dense_mm parallel_dense_mm.o 
+	rm -f open open.o close close.o read read.o write write.o malloc malloc.o free free.o fork fork.o sleep sleep.o big_example big_example.o parallel_dense_mm parallel_dense_mm.o random_access random_access.o 
