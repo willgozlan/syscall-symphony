@@ -60,7 +60,7 @@ int readline (char *buf, int sz, const char *fn, off_t *offset)
           //perror("flock (release)");
           return FLOCK_ERROR;
         }  
-	perror("lseek/read"); 
+	// perror("lseek/read"); 
         return BAD_READ;
     }
 
