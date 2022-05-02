@@ -45,10 +45,21 @@ int main(void)
 
 	free(malloc_test);
 
+
+	char* write_buf = "\n\n\n";
+
+	if(write(0, write_buf, sizeof(write_buf)) < 0)
+	{
+		perror("write");
+		return 6;
+	}
+
+	sleep(1);
+	
 	if(system(remove_pid_arg) < 0)
 	{
 		perror("system");
-		return 3;
+		return 5;
 	}
 
 	return 0;
