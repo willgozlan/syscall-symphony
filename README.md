@@ -74,7 +74,7 @@ Note: The first line of the Makefile in the `/syscall-symphony/examples` directo
   
 ## Known Bugs
   
-  See Project Report for More Details on this. 
+  See project report for more details on this. 
   
 #### Segmentation fault when `perror` or `printf` is called by a program linked with `glibc-symphony` (our modified version of glibc) 
 
