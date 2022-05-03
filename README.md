@@ -2,7 +2,7 @@
 Authors: William Gozlan, Meagan Konst, Diva Harsoor
 
 ## About
-This is the full version of the final version of our final project for CSE522S, syscall symphony. See the project report for more details. 
+This is the full version of the final version of our final project for CSE522S, called Syscall Symphony. This project was prepared on the Raspberry Pi 3B+ running the Raspberry Pi OS. See the project report for more details. 
 
 ## Setup, Build, and Run Instructions:
 1.) Clone the `main` branch of this repository in your root directory. The commands to do so are as follows. Note this will require `sudo` privileges.  
