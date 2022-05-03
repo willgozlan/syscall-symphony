@@ -3,7 +3,7 @@
  * File Summary
  *  - Internal function to convert from string to integer. 
  *  - Same usage as C's built in atoi() function, just doesn't call syscall wrapper
- *  - Adopted from: https://www.geeksforgeeks.org/write-your-own-atoi/
+ *  - Adapted from: https://www.geeksforgeeks.org/write-your-own-atoi/
  */
 
 #include "my_atoi.h"
