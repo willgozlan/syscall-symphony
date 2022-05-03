@@ -1,3 +1,7 @@
+/* File Name: readline.h
+ * File Summary: Header file for readline.c
+ */
+
 #pragma once
 
 #include <fcntl.h>
