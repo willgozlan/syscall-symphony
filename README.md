@@ -78,8 +78,8 @@ Note: The first line of the Makefile in the `/syscall-symphony/examples` directo
   
 #### Segmentation fault when `perror` or `printf` is called by a program linked with `glibc-symphony` (our modified version of glibc) 
 
-  This is due to infinite recursion from the `write` syscall wrapper, which we modified to check if the calling process has sound privileges. This check uses modified syscall wrappers, which then check if the calling process has sound privileges…and so on. To fix, we should remove all calls to `perror` and `printf` and replace with functions that call the `write` syscall using manifest constant instead of the via the `glibc` wrapper.
+  This is due to infinite recursion from the `write` syscall wrapper, which we modified to check if the calling process has sound privileges. This check uses modified syscall wrappers, which then check if the calling process has sound privileges…and so on. To fix, we should remove all calls to `perror` and `printf` and replace with functions that call the `write` syscall using manifest constant instead of the `glibc` wrapper.
   
 #### Race condition with `remove_pid` temporary file
   
-  The executable created from `remove_pid.c` creates a temporary file named `temp`, whose deletion is not included in the critical section protected by `flock()`. To fix, we should either expand the critical section to include the deletion of the temporary file or we should give each concurrent process a temporary file with a unique name.
+  The executable created from `remove_pid.c` creates a temporary file named `temp`, whose creation and deletion is not included in the critical section protected by `flock()`. To fix, we should either expand the critical section to include the temporary file or we should give each concurrent process a temporary file with a unique name.
