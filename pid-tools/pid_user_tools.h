@@ -1,3 +1,8 @@
+/*
+ * File Name: pid_user_tools.h
+ * File Summary: Header file for add_pid.c & remove_pid.c
+*/
+
 #pragma once
 
 #include "pid_exists.h"
