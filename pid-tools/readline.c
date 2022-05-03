@@ -1,6 +1,9 @@
-/* Very similar to C built in function getline(), but uses syscall() directly instead of wrapper 
- * to avoid recursion within modifed syscall wrapper. 
- * Adopted from: https://stackoverflow.com/questions/33106505/read-file-line-by-line-in-c-mostly-with-syscalls  
+/*
+ * File Name: readline.c
+ * File Summary:
+ *  - Very similar to C built in function getline()
+ *  - But uses syscall() directly instead of wrapper to avoid recursion within modifed syscall wrapper. 
+ *  - Adapted from: https://stackoverflow.com/questions/33106505/read-file-line-by-line-in-c-mostly-with-syscalls  
  */
 
 #include "readline.h"
@@ -82,7 +85,7 @@ int readline (char *buf, int sz, const char *fn, off_t *offset)
         return END_OF_FILE;
     }
 
-    // Check each chacr
+    // Check each char
     p = buf;
     while (idx < nchr && *p != '\n')
     {   
