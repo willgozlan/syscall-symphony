@@ -1,5 +1,16 @@
+/* File Name: remove_pid.c
+ * File Summary: 
+ *  - Revokes sound privileges of the process indicated by the given command line input 
+ *  - Does so by attempting to removing the given command line input from the .pids file
+ */
+     
 #include "pid_user_tools.h"
 
+/*
+ * Copies all lines of .pids that do not match with the given input to a data structure, 
+ * clears .pids, and copies the contents of the data structure into it
+ * Returns success or a unique error value
+ */
 int remove_pid(char* pid) {
     if (access("/syscall-symphony/pid-tools/.pids", F_OK) != SUCCESS) {
          return NO_DOT_PIDS_FILE;
@@ -132,6 +143,10 @@ int remove_pid(char* pid) {
   return SUCCESS;
 }
 
+/*
+ * Checks command line input and calls remove_pid()
+ * Returns success or a unique error value
+ */
 int main (int argc, char *argv[]) {
   if (argc != EXPECTED_NUM_ARGS) {
     if (printf("Usage: %s <PID>\n", argv[PROGRAM_NAME]) < SUCCESS) {
