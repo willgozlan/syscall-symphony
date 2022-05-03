@@ -1,7 +1,9 @@
 
-/* Internal function to convert from string to integer. 
- * Same usage as C's built in atoi() function, without worry of built in system calls
- * Adopted from: https://www.geeksforgeeks.org/write-your-own-atoi/
+/* File Name: my_atoi.c
+ * File Summary
+ *  - Internal function to convert from string to integer. 
+ *  - Same usage as C's built in atoi() function, just doesn't call syscall wrapper
+ *  - Adopted from: https://www.geeksforgeeks.org/write-your-own-atoi/
  */
 
 #include "my_atoi.h"
