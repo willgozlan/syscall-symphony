@@ -1,5 +1,5 @@
 # Final Project for Syscall Symphony 
-Authors William Gozlan, Meagan Konst, Diva Harsoor
+Authors: William Gozlan, Meagan Konst, Diva Harsoor
 
 ## About
 This is the full version of the final version of our final project for CSE522S, syscall symphony. See the project report for more details. 
