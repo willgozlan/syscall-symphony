@@ -1,8 +1,8 @@
 /*
-File Name: add_pid.c
-File Summary: 
- - Checks that given command line input is a reasonable PID and is not already in the .pids file
- - Adds it to the .pids file to mark it as having sound privileges
+ * File Name: add_pid.c
+ * File Summary: 
+ *  - Checks that given command line input is a reasonable PID and is not already in the .pids file
+ *  - Adds it to the .pids file to mark it as having sound privileges
 */
 
 #include "pid_user_tools.h"
