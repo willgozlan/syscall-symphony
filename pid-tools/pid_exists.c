@@ -1,3 +1,10 @@
+/*
+ * File Name: pid_exists.c
+ * File Summary: 
+ *  - Checks that given command line input is a reasonable PID and is not already in the .pids file 
+ *  - Adds it to the .pids file to mark it as having sound privileges
+ */
+
 #include "pid_exists.h"
 #include "my_atoi.h"
 #include "readline.h"
@@ -5,7 +12,7 @@
 #define END_OF_FILE -3
 
 /* Main function to check if a pid exists in our PID list.
- * Returning result of that, or unique error code
+ * Returns result of that or unique error code
  */
 int pid_exists(int pid)
 {
