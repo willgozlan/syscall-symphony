@@ -1,3 +1,10 @@
+/*
+ * File Name: play_sound.c
+ * File Summary
+ *  - Takes in an integer denoting the syscall to be made musical
+ *  - Plays the appropriate sound as defined by the file path macros above
+ */
+
 #include "play_sound.h"
 #include<sys/wait.h>
 #include<errno.h>
@@ -28,6 +35,10 @@
 // Other Constants
 #define CHILD 0
 
+/*
+ * Takes in an integer denoting the syscall to be made musical
+ * Plays the appropriate sound as defined by the file path macros above
+ */
 int play_sound(int sound) {
 
     pid_t pid;
