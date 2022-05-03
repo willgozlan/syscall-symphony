@@ -3,13 +3,14 @@
  * File Summary: 
  *  - Checks that given command line input is a reasonable PID and is not already in the .pids file
  *  - Adds it to the .pids file to mark it as having sound privileges
-*/
+ */
 
 #include "pid_user_tools.h"
 
 /*
-Checks if PID is already in the .pids file and adds it if not
-*/
+ * Checks if given input is already in the .pids file and adds it if not
+ * Returns success or a unique error value
+ */
 int add_pid(int pid) {
     int exists = pid_exists(pid); // checks if PID has sound privileges
     if (exists < SUCCESS) {
@@ -81,8 +82,9 @@ int add_pid(int pid) {
 }
 
 /*
-Checks command line input and calls add_pid()
-*/
+ * Checks command line input and calls add_pid()
+ * Returns success or a unique error value
+ */
 int main(int argc, char* argv[]) {
     if (argc != EXPECTED_NUM_ARGS) {
         if (printf("Usage: %s <PID>\n", argv[PROGRAM_NAME]) < SUCCESS) {
