@@ -1,3 +1,9 @@
+/*
+ * File Name: play_sound.h
+ * File Summary
+ *  - Header file for play_sound.c
+ */
+
 #pragma once
 #define READ 1
 #define WRITE 2
