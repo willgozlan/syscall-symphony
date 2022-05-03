@@ -1,7 +1,7 @@
 /*
  * File Name: pid_user_tools.h
  * File Summary: Header file for add_pid.c & remove_pid.c
-*/
+ */
 
 #pragma once
 
@@ -46,4 +46,4 @@
 #define ATOI_RET_ERROR_VALUE 0
 
 int add_pid(int pid);
-int remove_pid(char* pid);
+int remove_pid(char *pid);

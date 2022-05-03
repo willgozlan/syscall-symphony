@@ -5,5 +5,4 @@
 
 #pragma once
 
-int my_atoi(char* str);
-
+int my_atoi(char *str);

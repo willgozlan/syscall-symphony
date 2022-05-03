@@ -1,7 +1,7 @@
 /*
  * File Name: pid_exists.c
- * File Summary: 
- *  - Checks that given command line input is a reasonable PID and is not already in the .pids file 
+ * File Summary:
+ *  - Checks that given command line input is a reasonable PID and is not already in the .pids file
  *  - Adds it to the .pids file to mark it as having sound privileges
  */
 
@@ -24,7 +24,7 @@ int pid_exists(int pid)
     while ((len = readline(line, BUF_SIZE, "/syscall-symphony/pid-tools/.pids", &offset)) > 0)
     {
         // Check if PID is present on current line
-        if(my_atoi(line) == pid)
+        if (my_atoi(line) == pid)
         {
             return PID_FOUND;
         }
